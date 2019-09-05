@@ -189,20 +189,16 @@ public class RecJQTJBController {
 			fmap.put("前日报警总数", findJQNum2.get(i).getJjsl()+"");
 			fmap.put("前日有效警情", findJQNum2.get(i).getYxjq()+"");	
 		}
-		String zrbj=fmap.get("昨日报警总数");
-		int zrbjsl=Integer.parseInt(zrbj);
-		String qrbj=fmap.get("前日报警总数");
-		int qrbjsl=Integer.parseInt(qrbj);
+		int zrbjsl=Integer.parseInt(fmap.get("昨日报警总数"));
+		int qrbjsl=Integer.parseInt(fmap.get("前日报警总数"));
 //		int bjhb=(zrbjsl-qrbjsl)/qrbjsl;
 		DecimalFormat df = new DecimalFormat("0.000");
 		String num = df.format((float) (zrbjsl-qrbjsl)/qrbjsl);
 		double d = Double.valueOf(num);
 		fmap.put("报警总数环比", d+"");
 		
-		String zryx=fmap.get("昨日有效警情");
-		int zryxsl=Integer.parseInt(zryx);
-		String qryx=fmap.get("前日有效警情");
-		int qryxsl=Integer.parseInt(qryx);
+		int zryxsl=Integer.parseInt(fmap.get("昨日有效警情"));
+		int qryxsl=Integer.parseInt(fmap.get("前日有效警情"));
 		DecimalFormat df1 = new DecimalFormat("0.000");
 		String num1 = df1.format((float) (zryxsl-qryxsl)/qryxsl);
 		double f = Double.valueOf(num1);
@@ -211,7 +207,7 @@ public class RecJQTJBController {
 		map.put("Sjqhbfx", fmap);
 		List<RecJQFLTJB> findJQFLNum = recJQFLTJBService.findJQFLWDL(tjTime);			//昨日
 		Map<String,String> aa= new HashMap<>();//昨日数量
-		Map<String,String> cc= new HashMap<>();
+		//Map<String,String> cc= new HashMap<>();
 		int a=0;
 		int b=0;
 		int c=0;
@@ -226,32 +222,25 @@ public class RecJQTJBController {
 		for(int i=0;i<findJQFLNum.size();i++) {
 			if(findJQFLNum.get(i).getFldmmc()=="诈骗" || findJQFLNum.get(i).getFldmmc().equals("诈骗")) {
 				a+=findJQFLNum.get(i).getJjsl();
-				aa.put("诈骗", a+"");
 			}
 			if(findJQFLNum.get(i).getFldmmc()=="盗窃" || findJQFLNum.get(i).getFldmmc().equals("盗窃")) {
 				b+=findJQFLNum.get(i).getJjsl();
-				aa.put("盗窃", b+"");
 			}
 			if(findJQFLNum.get(i).getFldmmc()=="贩毒" || findJQFLNum.get(i).getFldmmc().equals("贩毒")) {
 				c+=findJQFLNum.get(i).getJjsl();
-				aa.put("贩毒", c+"");
 			}
 			if(findJQFLNum.get(i).getFldmmc()=="强奸" || findJQFLNum.get(i).getFldmmc().equals("强奸")) {
 				c1+=findJQFLNum.get(i).getJjsl();
-				aa.put("强奸", c1+"");
 			}
 			if(findJQFLNum.get(i).getFldmmc()=="抢劫" || findJQFLNum.get(i).getFldmmc().equals("抢劫")) {
-				e+=findJQFLNum.get(i).getJjsl();
-				aa.put("抢劫", e+"");
+				e+=findJQFLNum.get(i).getJjsl();	
 			}
 		}
-		for(int i =0;i<list.size();i++) {
-			String string = aa.get(list.get(i));
-			if(string==null) {
-				aa.put(list.get(i), "0");
-			}
-			
-		}
+		aa.put("诈骗", a+"");
+		aa.put("盗窃", b+"");
+		aa.put("贩毒", c+"");
+		aa.put("强奸", c1+"");
+		aa.put("抢劫", e+"");
 		zmap.put("ZTSL", aa+"");
 		
 		List<RecJQFLTJB> findJQFLNum2 = recJQFLTJBService.findJQFLWDL(qtTime);			//前日
@@ -264,89 +253,55 @@ public class RecJQTJBController {
 		for(int i=0;i<findJQFLNum2.size();i++) {
 			if(findJQFLNum2.get(i).getFldmmc()=="诈骗" || findJQFLNum2.get(i).getFldmmc().equals("诈骗")) {
 				g+=findJQFLNum2.get(i).getJjsl();
-				bb.put("诈骗", g+"");
 			}
 			if(findJQFLNum2.get(i).getFldmmc()=="盗窃" || findJQFLNum2.get(i).getFldmmc().equals("盗窃")) {
-				h+=findJQFLNum2.get(i).getJjsl();
-				bb.put("盗窃", h+"");
+				h+=findJQFLNum2.get(i).getJjsl();	
 			}
 			if(findJQFLNum2.get(i).getFldmmc()=="贩毒" || findJQFLNum2.get(i).getFldmmc().equals("贩毒")) {
 				j+=findJQFLNum2.get(i).getJjsl();
-				bb.put("贩毒", j+"");
 			}
 			if(findJQFLNum2.get(i).getFldmmc()=="强奸" || findJQFLNum2.get(i).getFldmmc().equals("强奸")) {
 				k+=findJQFLNum2.get(i).getJjsl();
-				bb.put("强奸", k+"");
 			}
 			if(findJQFLNum2.get(i).getFldmmc()=="抢劫" || findJQFLNum2.get(i).getFldmmc().equals("抢劫")) {
 				l+=findJQFLNum2.get(i).getJjsl();
-				bb.put("抢劫", l+"");
 			}
 		}
-		for(int i =0;i<list.size();i++) {
+		bb.put("诈骗", g+"");
+		bb.put("盗窃", h+"");
+		bb.put("贩毒", j+"");
+		bb.put("强奸", k+"");
+		bb.put("抢劫", l+"");
+/*		for(int i =0;i<list.size();i++) {
 			String string = bb.get(list.get(i));
 			if(string==null) {
 				bb.put(list.get(i), "0");
 			}
-		}
+		}*/
 		zmap.put("QTSL", bb+"");
 		
 		if(!aa.get("诈骗").equals("0")){
-			if(!bb.get("诈骗").equals("0")){
-				String zrzp=aa.get("诈骗");
-				int zrzpsl=Integer.parseInt(zrzp);
-				String qrzp=bb.get("诈骗");
-				int qrzpsl=Integer.parseInt(qrzp);
-				DecimalFormat df2 = new DecimalFormat("0.000");
-				String num2 = df2.format((float) (zrzpsl-qrzpsl)/qrzpsl);
-				double d2 = Double.valueOf(num2);
-				hmap.put("诈骗总数环比", d2+"");
-			}else{
-				hmap.put("诈骗总数环比", "0");
-			}
+			int zrzpsl=Integer.parseInt(aa.get("诈骗"));
+			int qrzpsl=Integer.parseInt(bb.get("诈骗"));
+			DecimalFormat df2 = new DecimalFormat("0.000");
+			String num2 = df2.format((float) (zrzpsl-qrzpsl)/qrzpsl);
+			double d2 = Double.valueOf(num2);
+			hmap.put("诈骗总数环比", d2+"");
 		}else{
-			if(!bb.get("诈骗").equals("0")){
-//				zmap.put("QTSL", bb+"");
-				int zrzpsl=0;
-				String qrzp=bb.get("诈骗");
-				int qrzpsl=Integer.parseInt(qrzp);
-				DecimalFormat df2 = new DecimalFormat("0.000");
-				String num2 = df2.format((float) (zrzpsl-qrzpsl)/qrzpsl);
-				double d2 = Double.valueOf(num2);
-				hmap.put("诈骗总数环比", d2+"");
-			}else{
-				hmap.put("诈骗总数环比", "0");
-			}
-			
+			hmap.put("诈骗总数环比", "0");
 		}
 		
 		if(!aa.get("盗窃").equals("0")){
-			if(!bb.get("盗窃").equals("0")){
-				String zrdq=aa.get("盗窃");
-				int zrdqsl=Integer.parseInt(zrdq);
-				String qrdq=bb.get("盗窃");
-				int qrdqsl=Integer.parseInt(qrdq);
-				DecimalFormat df3 = new DecimalFormat("0.000");
-				String num3 = df3.format((float) (zrdqsl-qrdqsl)/qrdqsl);
-				double d3 = Double.valueOf(num3);
-				hmap.put("盗窃总数环比", d3+"");
-			}else{
-				hmap.put("盗窃总数环比", "0");
-			}
+			String zrdq=aa.get("盗窃");
+			int zrdqsl=Integer.parseInt(zrdq);
+			String qrdq=bb.get("盗窃");
+			int qrdqsl=Integer.parseInt(qrdq);
+			DecimalFormat df3 = new DecimalFormat("0.000");
+			String num3 = df3.format((float) (zrdqsl-qrdqsl)/qrdqsl);
+			double d3 = Double.valueOf(num3);
+			hmap.put("盗窃总数环比", d3+"");
 		}else{
-			if(!bb.get("盗窃").equals("0")){
-//				String zrdq=aa.get("盗窃");
-				int zrdqsl=0;
-				String qrdq=bb.get("盗窃");
-				int qrdqsl=Integer.parseInt(qrdq);
-				DecimalFormat df3 = new DecimalFormat("0.000");
-				String num3 = df3.format((float) (zrdqsl-qrdqsl)/qrdqsl);
-				double d3 = Double.valueOf(num3);
-				hmap.put("盗窃总数环比", d3+"");
-			}else{
-				hmap.put("盗窃总数环比", "0");
-			}
-			
+			hmap.put("盗窃总数环比", "0");
 		}
 		
 //		String zrfd=aa.get("贩毒");
@@ -359,59 +314,29 @@ public class RecJQTJBController {
 //		fmap.put("贩毒总数环比", d4+"");
 		
 		if(!aa.get("强奸").equals("0")){
-			if(!bb.get("强奸").equals("0")){
-				String zrqj=aa.get("强奸");
-				int zrqjsl=Integer.parseInt(zrqj);
-				String qrqj=bb.get("强奸");
-				int qrqjsl=Integer.parseInt(qrqj);
-				DecimalFormat df5 = new DecimalFormat("0.000");
-				String num5 = df5.format((float) (zrqjsl-qrqjsl)/qrqjsl);
-				double d5 = Double.valueOf(num5);
-				hmap.put("强奸总数环比", d5+"");
-			}else{
-				hmap.put("强奸总数环比", "0");
-			}
+			String zrqj=aa.get("强奸");
+			int zrqjsl=Integer.parseInt(zrqj);
+			String qrqj=bb.get("强奸");
+			int qrqjsl=Integer.parseInt(qrqj);
+			DecimalFormat df5 = new DecimalFormat("0.000");
+			String num5 = df5.format((float) (zrqjsl-qrqjsl)/qrqjsl);
+			double d5 = Double.valueOf(num5);
+			hmap.put("强奸总数环比", d5+"");
 		}else{
-			if(!bb.get("强奸").equals("0")){
-				int zrqjsl=0;
-				String qrqj=bb.get("强奸");
-				int qrqjsl=Integer.parseInt(qrqj);
-				DecimalFormat df5 = new DecimalFormat("0.000");
-				String num5 = df5.format((float) (zrqjsl-qrqjsl)/qrqjsl);
-				double d5 = Double.valueOf(num5);
-				hmap.put("强奸总数环比", d5+"");
-			}else{
-				hmap.put("强奸总数环比", "0");
-			}
-			
+			hmap.put("强奸总数环比", "0");
 		}
 		
 		if(!aa.get("抢劫").equals("0")){
-			if(!bb.get("抢劫").equals("0")){
-				String zrqiangjie=aa.get("抢劫");
-				String qrqiangjie=bb.get("抢劫");
-				int zrqiangjiesl=Integer.parseInt(zrqiangjie);
-				int qrqiangjiesl=Integer.parseInt(qrqiangjie);
-				DecimalFormat df6 = new DecimalFormat("0.000");
-				String num6 = df6.format((float) (zrqiangjiesl-qrqiangjiesl)/qrqiangjiesl);
-				double d6 = Double.valueOf(num6);
-				hmap.put("抢劫总数环比", d6+"");
-			}else{
-				hmap.put("抢劫总数环比", "0");
-			}
+			String zrqiangjie=aa.get("抢劫");
+			String qrqiangjie=bb.get("抢劫");
+			int zrqiangjiesl=Integer.parseInt(zrqiangjie);
+			int qrqiangjiesl=Integer.parseInt(qrqiangjie);
+			DecimalFormat df6 = new DecimalFormat("0.000");
+			String num6 = df6.format((float) (zrqiangjiesl-qrqiangjiesl)/qrqiangjiesl);
+			double d6 = Double.valueOf(num6);
+			hmap.put("抢劫总数环比", d6+"");
 		}else{
-			if(!bb.get("抢劫").equals("0")){
-				int zrqiangjiesl=0;
-				String qrqiangjie=bb.get("抢劫");
-				int qrqiangjiesl=Integer.parseInt(qrqiangjie);
-				DecimalFormat df6 = new DecimalFormat("0.000");
-				String num6 = df6.format((float) (zrqiangjiesl-qrqiangjiesl)/qrqiangjiesl);
-				double d6 = Double.valueOf(num6);
-				hmap.put("抢劫总数环比", d6+"");
-			}else{
-				hmap.put("抢劫总数环比", "0");
-			}
-			
+			hmap.put("抢劫总数环比", "0");
 		}
 
 		map.put("wdlhb",hmap);
