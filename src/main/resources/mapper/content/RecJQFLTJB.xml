@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.toughguy.dataDisplay.model.content.RecJQFLTJB">
+<mapper namespace="com.toughguy.cityDisplay.model.content.RecJQFLTJB">
 
 	<!-- 查询各大类的警情分类数量（首页今日、昨日、前日）-->
 	<select id="findJQFLNum" parameterType="String" resultType="RecJQFLTJB">

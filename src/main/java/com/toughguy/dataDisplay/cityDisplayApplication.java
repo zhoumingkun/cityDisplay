@@ -16,11 +16,11 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @EnableAutoConfiguration
-@ServletComponentScan(basePackages = {"com.toughguy.dataDisplay.filter"})
-public class dataDisplayApplication {
+@ServletComponentScan(basePackages = {"com.toughguy.cityDisplay.filter"})
+public class cityDisplayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(dataDisplayApplication.class, args);
+		SpringApplication.run(cityDisplayApplication.class, args);
 	}
 	
 	//-- 自己的应用的服务器设置
@@ -44,7 +44,7 @@ public class dataDisplayApplication {
 //	    return factory;
 		 TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
 		    factory.setPort(8083);
-		    factory.setContextPath("/dataDisplay");
+		    factory.setContextPath("/cityDisplay");
 		    factory.setSessionTimeout(60, TimeUnit.MINUTES);
 		    return factory;
 	}
