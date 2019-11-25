@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.model.database;
+package com.toughguy.cityDisplay.model.database;
 
 import java.util.Hashtable;
 /**

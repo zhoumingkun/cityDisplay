@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

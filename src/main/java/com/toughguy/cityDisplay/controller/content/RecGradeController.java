@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.content;
+package com.toughguy.cityDisplay.controller.content;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.toughguy.dataDisplay.model.content.RecGrade;
-import com.toughguy.dataDisplay.persist.content.prototype.IRecGradeDao;
-import com.toughguy.dataDisplay.service.content.prototype.IRecGradeService;
+import com.toughguy.cityDisplay.model.content.RecGrade;
+import com.toughguy.cityDisplay.persist.content.prototype.IRecGradeDao;
+import com.toughguy.cityDisplay.service.content.prototype.IRecGradeService;
 
 @RestController
 @RequestMapping("/redGrade")

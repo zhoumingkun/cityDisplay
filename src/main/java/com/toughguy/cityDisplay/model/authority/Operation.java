@@ -1,11 +1,11 @@
-package com.toughguy.dataDisplay.model.authority;
+package com.toughguy.cityDisplay.model.authority;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.toughguy.dataDisplay.model.AbstractModel;
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.model.AbstractModel;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

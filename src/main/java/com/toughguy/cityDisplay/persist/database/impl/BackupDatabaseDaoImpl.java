@@ -1,10 +1,10 @@
-package com.toughguy.dataDisplay.persist.database.impl;
+package com.toughguy.cityDisplay.persist.database.impl;
 
 import org.springframework.stereotype.Repository;
 
-import com.toughguy.dataDisplay.model.database.BackupDatabaseInfo;
-import com.toughguy.dataDisplay.persist.database.prototype.IBackupDatabaseDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+import com.toughguy.cityDisplay.model.database.BackupDatabaseInfo;
+import com.toughguy.cityDisplay.persist.database.prototype.IBackupDatabaseDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

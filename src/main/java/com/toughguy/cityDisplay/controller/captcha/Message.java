@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.captcha;
+package com.toughguy.cityDisplay.controller.captcha;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
-import com.toughguy.dataDisplay.util.AliyunMessageUtil;
-import com.toughguy.dataDisplay.util.MD5Util;
+import com.toughguy.cityDisplay.util.AliyunMessageUtil;
+import com.toughguy.cityDisplay.util.MD5Util;
 
 
 

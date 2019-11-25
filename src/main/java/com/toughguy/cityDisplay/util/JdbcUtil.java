@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.util;
+package com.toughguy.cityDisplay.util;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;

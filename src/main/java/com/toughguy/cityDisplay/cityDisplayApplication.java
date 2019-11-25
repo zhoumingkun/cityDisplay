@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay;
+package com.toughguy.cityDisplay;
 
 import java.util.concurrent.TimeUnit;
 

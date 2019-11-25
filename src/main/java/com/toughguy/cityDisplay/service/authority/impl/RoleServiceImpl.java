@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.service.authority.impl;
+package com.toughguy.cityDisplay.service.authority.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,11 +8,11 @@ import java.util.Map;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.persist.authority.prototype.IRoleDao;
-import com.toughguy.dataDisplay.service.authority.prototype.IRoleService;
-import com.toughguy.dataDisplay.service.impl.GenericServiceImpl;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.persist.authority.prototype.IRoleDao;
+import com.toughguy.cityDisplay.service.authority.prototype.IRoleService;
+import com.toughguy.cityDisplay.service.impl.GenericServiceImpl;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

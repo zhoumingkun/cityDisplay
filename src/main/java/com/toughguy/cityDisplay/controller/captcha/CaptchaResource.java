@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.captcha;
+package com.toughguy.cityDisplay.controller.captcha;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;

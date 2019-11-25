@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.ueditor;
+package com.toughguy.cityDisplay.ueditor;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

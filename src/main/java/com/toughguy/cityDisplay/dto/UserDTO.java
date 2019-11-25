@@ -1,6 +1,6 @@
-package com.toughguy.dataDisplay.dto;
+package com.toughguy.cityDisplay.dto;
 
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 /**
  * 用户基本信息（前台）

@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.model.content;
+package com.toughguy.cityDisplay.model.content;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -8,8 +8,8 @@ import javax.net.ssl.X509TrustManager;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.toughguy.dataDisplay.model.AbstractModel;
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.model.AbstractModel;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 /**
  * 管理器实体类

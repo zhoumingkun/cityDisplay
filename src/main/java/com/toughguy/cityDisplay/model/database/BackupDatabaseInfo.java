@@ -1,9 +1,9 @@
-package com.toughguy.dataDisplay.model.database;
+package com.toughguy.cityDisplay.model.database;
 
 import java.text.NumberFormat;
 
-import com.toughguy.dataDisplay.model.AbstractModel;
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.model.AbstractModel;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

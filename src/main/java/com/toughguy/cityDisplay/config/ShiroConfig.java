@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.toughguy.dataDisplay.security.SystemRealm;
+import com.toughguy.cityDisplay.security.SystemRealm;
 
 @Configuration
 public class ShiroConfig {

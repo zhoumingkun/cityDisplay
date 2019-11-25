@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.ueditor.hunter;
+package com.toughguy.cityDisplay.ueditor.hunter;
 
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
@@ -8,13 +8,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import com.toughguy.dataDisplay.ueditor.PathFormat;
-import com.toughguy.dataDisplay.ueditor.define.AppInfo;
-import com.toughguy.dataDisplay.ueditor.define.BaseState;
-import com.toughguy.dataDisplay.ueditor.define.MIMEType;
-import com.toughguy.dataDisplay.ueditor.define.MultiState;
-import com.toughguy.dataDisplay.ueditor.define.State;
-import com.toughguy.dataDisplay.ueditor.upload.StorageManager;
+import com.toughguy.cityDisplay.ueditor.PathFormat;
+import com.toughguy.cityDisplay.ueditor.define.AppInfo;
+import com.toughguy.cityDisplay.ueditor.define.BaseState;
+import com.toughguy.cityDisplay.ueditor.define.MIMEType;
+import com.toughguy.cityDisplay.ueditor.define.MultiState;
+import com.toughguy.cityDisplay.ueditor.define.State;
+import com.toughguy.cityDisplay.ueditor.upload.StorageManager;
 
 /**
  * 图片抓取器

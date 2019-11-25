@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.pagination;
+package com.toughguy.cityDisplay.pagination;
 
 import java.util.List;
 

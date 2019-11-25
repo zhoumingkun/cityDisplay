@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.authority;
+package com.toughguy.cityDisplay.controller.authority;
 
 
 import java.util.ArrayList;
@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toughguy.dataDisplay.dto.TreeDTO;
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.model.authority.User;
-import com.toughguy.dataDisplay.service.authority.prototype.IAuthorityService;
-import com.toughguy.dataDisplay.service.authority.prototype.IUserService;
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.dto.TreeDTO;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.model.authority.User;
+import com.toughguy.cityDisplay.service.authority.prototype.IAuthorityService;
+import com.toughguy.cityDisplay.service.authority.prototype.IUserService;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

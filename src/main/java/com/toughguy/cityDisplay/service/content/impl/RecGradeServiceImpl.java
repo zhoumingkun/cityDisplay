@@ -1,14 +1,14 @@
-package com.toughguy.dataDisplay.service.content.impl;
+package com.toughguy.cityDisplay.service.content.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.toughguy.dataDisplay.model.content.RecGrade;
-import com.toughguy.dataDisplay.persist.content.prototype.IRecGradeDao;
-import com.toughguy.dataDisplay.service.content.prototype.IRecGradeService;
-import com.toughguy.dataDisplay.service.impl.GenericServiceImpl;
+import com.toughguy.cityDisplay.model.content.RecGrade;
+import com.toughguy.cityDisplay.persist.content.prototype.IRecGradeDao;
+import com.toughguy.cityDisplay.service.content.prototype.IRecGradeService;
+import com.toughguy.cityDisplay.service.impl.GenericServiceImpl;
 
 
 @Service

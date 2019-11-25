@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.service.authority.impl;
+package com.toughguy.cityDisplay.service.authority.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,16 +6,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.toughguy.dataDisplay.dto.OperationDTO;
-import com.toughguy.dataDisplay.dto.TreeDTO;
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Resource;
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.persist.authority.prototype.IOperationDao;
-import com.toughguy.dataDisplay.persist.authority.prototype.IResourceDao;
-import com.toughguy.dataDisplay.persist.authority.prototype.IRoleDao;
-import com.toughguy.dataDisplay.service.authority.prototype.IResourceService;
-import com.toughguy.dataDisplay.service.impl.GenericServiceImpl;
+import com.toughguy.cityDisplay.dto.OperationDTO;
+import com.toughguy.cityDisplay.dto.TreeDTO;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Resource;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.persist.authority.prototype.IOperationDao;
+import com.toughguy.cityDisplay.persist.authority.prototype.IResourceDao;
+import com.toughguy.cityDisplay.persist.authority.prototype.IRoleDao;
+import com.toughguy.cityDisplay.service.authority.prototype.IResourceService;
+import com.toughguy.cityDisplay.service.impl.GenericServiceImpl;
 ;
 
 @Service

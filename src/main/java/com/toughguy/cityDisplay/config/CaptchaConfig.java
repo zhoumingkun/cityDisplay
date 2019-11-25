@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 
 import java.util.Properties;
 import java.util.Random;

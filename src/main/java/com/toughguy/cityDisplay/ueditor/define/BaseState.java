@@ -1,10 +1,10 @@
-package com.toughguy.dataDisplay.ueditor.define;
+package com.toughguy.cityDisplay.ueditor.define;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.toughguy.dataDisplay.ueditor.Encoder;
+import com.toughguy.cityDisplay.ueditor.Encoder;
 
 public class BaseState implements State {
 

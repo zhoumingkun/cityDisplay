@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.exception;
+package com.toughguy.cityDisplay.exception;
 
 
 import org.apache.shiro.authz.UnauthenticatedException;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.service.authority.impl;
+package com.toughguy.cityDisplay.service.authority.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,11 +10,11 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.model.authority.User;
-import com.toughguy.dataDisplay.persist.authority.prototype.IUserDao;
-import com.toughguy.dataDisplay.service.authority.prototype.IUserService;
-import com.toughguy.dataDisplay.service.impl.GenericServiceImpl;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.model.authority.User;
+import com.toughguy.cityDisplay.persist.authority.prototype.IUserDao;
+import com.toughguy.cityDisplay.service.authority.prototype.IUserService;
+import com.toughguy.cityDisplay.service.impl.GenericServiceImpl;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

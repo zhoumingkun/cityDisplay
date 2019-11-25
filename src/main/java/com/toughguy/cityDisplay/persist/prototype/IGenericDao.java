@@ -1,10 +1,10 @@
-package com.toughguy.dataDisplay.persist.prototype;
+package com.toughguy.cityDisplay.persist.prototype;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-import com.toughguy.dataDisplay.pagination.PagerModel;
+import com.toughguy.cityDisplay.pagination.PagerModel;
 
 
 

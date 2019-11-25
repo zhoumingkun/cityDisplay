@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.ueditor.define;
+package com.toughguy.cityDisplay.ueditor.define;
 
 import java.util.HashMap;
 import java.util.Map;

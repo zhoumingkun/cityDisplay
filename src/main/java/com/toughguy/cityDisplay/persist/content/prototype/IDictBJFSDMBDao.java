@@ -1,12 +1,12 @@
-package com.toughguy.dataDisplay.persist.content.prototype;
+package com.toughguy.cityDisplay.persist.content.prototype;
 
 
 import java.util.List;
 import java.util.Map;
 
-import com.toughguy.dataDisplay.model.content.DictBJFSDMB;
-import com.toughguy.dataDisplay.model.content.DictXZQHB;
-import com.toughguy.dataDisplay.persist.prototype.IGenericDao;
+import com.toughguy.cityDisplay.model.content.DictBJFSDMB;
+import com.toughguy.cityDisplay.model.content.DictXZQHB;
+import com.toughguy.cityDisplay.persist.prototype.IGenericDao;
 
 /**
  * 字典表-报警方式代码表Dao接口类

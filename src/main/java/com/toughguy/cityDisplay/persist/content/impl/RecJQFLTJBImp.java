@@ -1,10 +1,11 @@
-package com.toughguy.dataDisplay.persist.content.impl;
+package com.toughguy.cityDisplay.persist.content.impl;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
-import com.toughguy.dataDisplay.model.content.RecJQFLTJB;
-import com.toughguy.dataDisplay.persist.content.prototype.IRecJQFLTJBDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+
+import com.toughguy.cityDisplay.model.content.RecJQFLTJB;
+import com.toughguy.cityDisplay.persist.content.prototype.IRecJQFLTJBDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
  * 统计表表-警情分类统计表 Dao实现类
  * @author zmk

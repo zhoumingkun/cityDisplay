@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.service.impl;
+package com.toughguy.cityDisplay.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.toughguy.dataDisplay.pagination.PagerModel;
-import com.toughguy.dataDisplay.persist.prototype.IGenericDao;
-import com.toughguy.dataDisplay.service.prototype.IGenericService;
+import com.toughguy.cityDisplay.pagination.PagerModel;
+import com.toughguy.cityDisplay.persist.prototype.IGenericDao;
+import com.toughguy.cityDisplay.service.prototype.IGenericService;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

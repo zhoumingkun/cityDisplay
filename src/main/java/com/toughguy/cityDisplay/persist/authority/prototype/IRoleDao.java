@@ -1,10 +1,10 @@
-package com.toughguy.dataDisplay.persist.authority.prototype;
+package com.toughguy.cityDisplay.persist.authority.prototype;
 
 import java.util.List;
 
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.persist.prototype.IGenericDao;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.persist.prototype.IGenericDao;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

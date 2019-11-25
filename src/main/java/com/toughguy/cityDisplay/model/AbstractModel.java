@@ -1,11 +1,11 @@
-package com.toughguy.dataDisplay.model;
+package com.toughguy.cityDisplay.model;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.toughguy.dataDisplay.util.DateUtil;
+import com.toughguy.cityDisplay.util.DateUtil;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

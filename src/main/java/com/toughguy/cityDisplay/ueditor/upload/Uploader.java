@@ -1,9 +1,9 @@
-package com.toughguy.dataDisplay.ueditor.upload;
+package com.toughguy.cityDisplay.ueditor.upload;
 
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
-import com.toughguy.dataDisplay.ueditor.define.State;
+import com.toughguy.cityDisplay.ueditor.define.State;
 
 public class Uploader {
     private HttpServletRequest request = null;

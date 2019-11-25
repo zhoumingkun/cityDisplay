@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

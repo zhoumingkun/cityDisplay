@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.util;
+package com.toughguy.cityDisplay.util;
 
 import java.lang.reflect.Field;
 import java.util.Map;

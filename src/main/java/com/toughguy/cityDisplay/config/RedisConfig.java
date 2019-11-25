@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;

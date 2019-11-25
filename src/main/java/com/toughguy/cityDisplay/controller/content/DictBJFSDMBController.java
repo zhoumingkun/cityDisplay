@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.content;
+package com.toughguy.cityDisplay.controller.content;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -31,9 +31,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toughguy.dataDisplay.model.content.DictBJFSDMB;
-import com.toughguy.dataDisplay.pagination.PagerModel;
-import com.toughguy.dataDisplay.service.content.prototype.IDictBJFSDMBService;
+import com.toughguy.cityDisplay.model.content.DictBJFSDMB;
+import com.toughguy.cityDisplay.pagination.PagerModel;
+import com.toughguy.cityDisplay.service.content.prototype.IDictBJFSDMBService;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;

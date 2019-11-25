@@ -1,11 +1,11 @@
-package com.toughguy.dataDisplay.service.database.prototype;
+package com.toughguy.cityDisplay.service.database.prototype;
 
 import java.io.IOException;
 
 import javax.servlet.http.HttpSession;
 
-import com.toughguy.dataDisplay.model.database.BackupDatabaseInfo;
-import com.toughguy.dataDisplay.service.prototype.IGenericService;
+import com.toughguy.cityDisplay.model.database.BackupDatabaseInfo;
+import com.toughguy.cityDisplay.service.prototype.IGenericService;
 
 /**
  * 数据库备份服务接口类

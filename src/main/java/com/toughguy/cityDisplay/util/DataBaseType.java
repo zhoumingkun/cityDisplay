@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.util;
+package com.toughguy.cityDisplay.util;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

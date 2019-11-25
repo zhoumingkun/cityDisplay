@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +18,9 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.toughguy.dataDisplay.ueditor.ActionEnter;
-import com.toughguy.dataDisplay.ueditor.ConfigManager;
-import com.toughguy.dataDisplay.ueditor.UEditorConfig;
+import com.toughguy.cityDisplay.ueditor.ActionEnter;
+import com.toughguy.cityDisplay.ueditor.ConfigManager;
+import com.toughguy.cityDisplay.ueditor.UEditorConfig;
 /**
  * 跨域请求配置
  * @author BOBO

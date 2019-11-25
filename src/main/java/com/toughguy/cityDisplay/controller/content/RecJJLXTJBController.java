@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.content;
+package com.toughguy.cityDisplay.controller.content;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toughguy.dataDisplay.model.content.RecJJLXTJB;
-import com.toughguy.dataDisplay.pagination.PagerModel;
-import com.toughguy.dataDisplay.service.content.prototype.IRecJJLXTJBService;
+import com.toughguy.cityDisplay.model.content.RecJJLXTJB;
+import com.toughguy.cityDisplay.pagination.PagerModel;
+import com.toughguy.cityDisplay.service.content.prototype.IRecJJLXTJBService;
 
 @RestController
 @RequestMapping(value = "/recJJLXTJB")

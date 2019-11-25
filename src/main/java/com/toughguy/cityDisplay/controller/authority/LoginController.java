@@ -1,5 +1,5 @@
 
-package com.toughguy.dataDisplay.controller.authority;
+package com.toughguy.cityDisplay.controller.authority;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -27,15 +27,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.google.code.kaptcha.Constants;
-import com.toughguy.dataDisplay.dto.UserDTO;
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.model.authority.User;
-import com.toughguy.dataDisplay.persist.authority.prototype.IOperationDao;
-import com.toughguy.dataDisplay.persist.authority.prototype.IResourceDao;
-import com.toughguy.dataDisplay.persist.authority.prototype.IRoleDao;
-import com.toughguy.dataDisplay.persist.authority.prototype.IUserDao;
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.dto.UserDTO;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.model.authority.User;
+import com.toughguy.cityDisplay.persist.authority.prototype.IOperationDao;
+import com.toughguy.cityDisplay.persist.authority.prototype.IResourceDao;
+import com.toughguy.cityDisplay.persist.authority.prototype.IRoleDao;
+import com.toughguy.cityDisplay.persist.authority.prototype.IUserDao;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 
 /**

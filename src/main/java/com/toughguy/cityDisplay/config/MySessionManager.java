@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.config;
+package com.toughguy.cityDisplay.config;
 import org.apache.shiro.web.servlet.ShiroHttpServletRequest;  
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;  
 import org.apache.shiro.web.util.WebUtils;  

@@ -1,14 +1,14 @@
-package com.toughguy.dataDisplay.ueditor.upload;
+package com.toughguy.cityDisplay.ueditor.upload;
 
 import java.util.Map;
 
 import org.apache.commons.codec.binary.Base64;
 
-import com.toughguy.dataDisplay.ueditor.PathFormat;
-import com.toughguy.dataDisplay.ueditor.define.AppInfo;
-import com.toughguy.dataDisplay.ueditor.define.BaseState;
-import com.toughguy.dataDisplay.ueditor.define.FileType;
-import com.toughguy.dataDisplay.ueditor.define.State;
+import com.toughguy.cityDisplay.ueditor.PathFormat;
+import com.toughguy.cityDisplay.ueditor.define.AppInfo;
+import com.toughguy.cityDisplay.ueditor.define.BaseState;
+import com.toughguy.cityDisplay.ueditor.define.FileType;
+import com.toughguy.cityDisplay.ueditor.define.State;
 
 public final class Base64Uploader {
 

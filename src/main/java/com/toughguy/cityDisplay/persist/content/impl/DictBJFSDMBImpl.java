@@ -1,12 +1,12 @@
-package com.toughguy.dataDisplay.persist.content.impl;
+package com.toughguy.cityDisplay.persist.content.impl;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.toughguy.dataDisplay.model.content.DictBJFSDMB;
-import com.toughguy.dataDisplay.persist.content.prototype.IDictBJFSDMBDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+import com.toughguy.cityDisplay.model.content.DictBJFSDMB;
+import com.toughguy.cityDisplay.persist.content.prototype.IDictBJFSDMBDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
  * 字典表-报警方式代码表Dao实现类
  * @author zmk

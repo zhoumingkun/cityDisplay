@@ -1,8 +1,8 @@
-package com.toughguy.dataDisplay.dto;
+package com.toughguy.cityDisplay.dto;
 
 import java.util.List;
 
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 
 /**

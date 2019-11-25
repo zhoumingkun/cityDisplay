@@ -1,5 +1,5 @@
 
-package com.toughguy.dataDisplay.security;
+package com.toughguy.cityDisplay.security;
 
 
 import java.util.List;
@@ -18,10 +18,10 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.User;
-import com.toughguy.dataDisplay.service.authority.prototype.IAuthorityService;
-import com.toughguy.dataDisplay.service.authority.prototype.IUserService;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.User;
+import com.toughguy.cityDisplay.service.authority.prototype.IAuthorityService;
+import com.toughguy.cityDisplay.service.authority.prototype.IUserService;
 
 /**
  * 管理员realm

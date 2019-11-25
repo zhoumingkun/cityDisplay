@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.ueditor.upload;
+package com.toughguy.cityDisplay.ueditor.upload;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -9,9 +9,9 @@ import java.io.InputStream;
 
 import org.apache.commons.io.FileUtils;
 
-import com.toughguy.dataDisplay.ueditor.define.AppInfo;
-import com.toughguy.dataDisplay.ueditor.define.BaseState;
-import com.toughguy.dataDisplay.ueditor.define.State;
+import com.toughguy.cityDisplay.ueditor.define.AppInfo;
+import com.toughguy.cityDisplay.ueditor.define.BaseState;
+import com.toughguy.cityDisplay.ueditor.define.State;
 
 public class StorageManager {
     public static final int BUFFER_SIZE = 8192;

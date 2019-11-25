@@ -1,13 +1,13 @@
-package com.toughguy.dataDisplay.persist.authority.impl;
+package com.toughguy.cityDisplay.persist.authority.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.toughguy.dataDisplay.dto.OperationDTO;
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.persist.authority.prototype.IOperationDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+import com.toughguy.cityDisplay.dto.OperationDTO;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.persist.authority.prototype.IOperationDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.authority;
+package com.toughguy.cityDisplay.controller.authority;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,13 +13,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.toughguy.dataDisplay.dto.TreeDTO;
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Resource;
-import com.toughguy.dataDisplay.service.authority.prototype.IAuthorityService;
-import com.toughguy.dataDisplay.service.authority.prototype.IOperationService;
-import com.toughguy.dataDisplay.service.authority.prototype.IResourceService;
-import com.toughguy.dataDisplay.util.JsonUtil;
+import com.toughguy.cityDisplay.dto.TreeDTO;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Resource;
+import com.toughguy.cityDisplay.service.authority.prototype.IAuthorityService;
+import com.toughguy.cityDisplay.service.authority.prototype.IOperationService;
+import com.toughguy.cityDisplay.service.authority.prototype.IResourceService;
+import com.toughguy.cityDisplay.util.JsonUtil;
 
 
 /**

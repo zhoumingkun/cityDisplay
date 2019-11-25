@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.content;
+package com.toughguy.cityDisplay.controller.content;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toughguy.dataDisplay.model.content.DictJJLXDMB;
-import com.toughguy.dataDisplay.pagination.PagerModel;
-import com.toughguy.dataDisplay.service.content.prototype.IDictJJLXDMBService;
+import com.toughguy.cityDisplay.model.content.DictJJLXDMB;
+import com.toughguy.cityDisplay.pagination.PagerModel;
+import com.toughguy.cityDisplay.service.content.prototype.IDictJJLXDMBService;
 
 @RestController
 @RequestMapping(value = "/dictJJLXDMB")

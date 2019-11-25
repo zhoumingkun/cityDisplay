@@ -1,12 +1,12 @@
-package com.toughguy.dataDisplay.persist.content.impl;
+package com.toughguy.cityDisplay.persist.content.impl;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
 
-import com.toughguy.dataDisplay.model.content.RecBJFSTJB;
-import com.toughguy.dataDisplay.model.content.RecLHLXTJB;
-import com.toughguy.dataDisplay.persist.content.prototype.IRecLHLXTJBDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+import com.toughguy.cityDisplay.model.content.RecBJFSTJB;
+import com.toughguy.cityDisplay.model.content.RecLHLXTJB;
+import com.toughguy.cityDisplay.persist.content.prototype.IRecLHLXTJBDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
  * 统计表表-来话类型统计表 Dao实现类
  * @author zmk

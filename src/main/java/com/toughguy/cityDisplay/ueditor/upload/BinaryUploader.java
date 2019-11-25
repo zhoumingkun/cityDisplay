@@ -1,14 +1,14 @@
-package com.toughguy.dataDisplay.ueditor.upload;
+package com.toughguy.cityDisplay.ueditor.upload;
 
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.toughguy.dataDisplay.ueditor.PathFormat;
-import com.toughguy.dataDisplay.ueditor.define.AppInfo;
-import com.toughguy.dataDisplay.ueditor.define.BaseState;
-import com.toughguy.dataDisplay.ueditor.define.FileType;
-import com.toughguy.dataDisplay.ueditor.define.State;
+import com.toughguy.cityDisplay.ueditor.PathFormat;
+import com.toughguy.cityDisplay.ueditor.define.AppInfo;
+import com.toughguy.cityDisplay.ueditor.define.BaseState;
+import com.toughguy.cityDisplay.ueditor.define.FileType;
+import com.toughguy.cityDisplay.ueditor.define.State;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;

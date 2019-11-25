@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.content;
+package com.toughguy.cityDisplay.controller.content;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.toughguy.dataDisplay.service.content.prototype.IProcessCaseService;
+import com.toughguy.cityDisplay.service.content.prototype.IProcessCaseService;
 
 @RestController
 @RequestMapping("/processHandling")

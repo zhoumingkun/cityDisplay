@@ -1,11 +1,11 @@
-package com.toughguy.dataDisplay.service.authority.prototype;
+package com.toughguy.cityDisplay.service.authority.prototype;
 
 import java.util.List;
 
-import com.toughguy.dataDisplay.dto.TreeDTO;
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Resource;
-import com.toughguy.dataDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.dto.TreeDTO;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Resource;
+import com.toughguy.cityDisplay.model.authority.Role;
 
 
 /**

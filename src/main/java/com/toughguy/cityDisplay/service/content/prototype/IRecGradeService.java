@@ -1,8 +1,9 @@
-package com.toughguy.dataDisplay.service.content.prototype;
+package com.toughguy.cityDisplay.service.content.prototype;
 
 import java.util.List;
-import com.toughguy.dataDisplay.model.content.RecGrade;
-import com.toughguy.dataDisplay.service.prototype.IGenericService;
+
+import com.toughguy.cityDisplay.model.content.RecGrade;
+import com.toughguy.cityDisplay.service.prototype.IGenericService;
 
 public interface IRecGradeService extends IGenericService<RecGrade, Integer> {
 	

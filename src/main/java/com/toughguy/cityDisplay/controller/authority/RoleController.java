@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.controller.authority;
+package com.toughguy.cityDisplay.controller.authority;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.toughguy.dataDisplay.model.authority.Operation;
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.pagination.PagerModel;
-import com.toughguy.dataDisplay.service.authority.prototype.IAuthorityService;
-import com.toughguy.dataDisplay.service.authority.prototype.IRoleService;
-import com.toughguy.dataDisplay.util.PinyinUtil;
+import com.toughguy.cityDisplay.model.authority.Operation;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.pagination.PagerModel;
+import com.toughguy.cityDisplay.service.authority.prototype.IAuthorityService;
+import com.toughguy.cityDisplay.service.authority.prototype.IRoleService;
+import com.toughguy.cityDisplay.util.PinyinUtil;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

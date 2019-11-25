@@ -1,9 +1,9 @@
-package com.toughguy.dataDisplay.service.content.prototype;
+package com.toughguy.cityDisplay.service.content.prototype;
 
 import java.util.Map;
 
-import com.toughguy.dataDisplay.model.content.ProcessCase;
-import com.toughguy.dataDisplay.service.prototype.IGenericService;
+import com.toughguy.cityDisplay.model.content.ProcessCase;
+import com.toughguy.cityDisplay.service.prototype.IGenericService;
 
 public interface IProcessCaseService extends IGenericService<ProcessCase, Integer> {
 

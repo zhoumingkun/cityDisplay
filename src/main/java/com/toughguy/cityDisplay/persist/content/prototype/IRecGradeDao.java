@@ -1,9 +1,9 @@
-package com.toughguy.dataDisplay.persist.content.prototype;
+package com.toughguy.cityDisplay.persist.content.prototype;
 
 import java.util.List;
 
-import com.toughguy.dataDisplay.model.content.RecGrade;
-import com.toughguy.dataDisplay.persist.prototype.IGenericDao;
+import com.toughguy.cityDisplay.model.content.RecGrade;
+import com.toughguy.cityDisplay.persist.prototype.IGenericDao;
 
 public interface IRecGradeDao extends IGenericDao<RecGrade, Integer>  {
 

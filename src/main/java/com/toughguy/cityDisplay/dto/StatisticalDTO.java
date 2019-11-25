@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.dto;
+package com.toughguy.cityDisplay.dto;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.persist.authority.impl;
+package com.toughguy.cityDisplay.persist.authority.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,10 +7,10 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.model.authority.User;
-import com.toughguy.dataDisplay.persist.authority.prototype.IUserDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.model.authority.User;
+import com.toughguy.cityDisplay.persist.authority.prototype.IUserDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.ueditor.define;
+package com.toughguy.cityDisplay.ueditor.define;
 
 /**
  * 处理状态接口

@@ -1,7 +1,7 @@
-package com.toughguy.dataDisplay.persist.database.prototype;
+package com.toughguy.cityDisplay.persist.database.prototype;
 
-import com.toughguy.dataDisplay.model.database.BackupDatabaseInfo;
-import com.toughguy.dataDisplay.persist.prototype.IGenericDao;
+import com.toughguy.cityDisplay.model.database.BackupDatabaseInfo;
+import com.toughguy.cityDisplay.persist.prototype.IGenericDao;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

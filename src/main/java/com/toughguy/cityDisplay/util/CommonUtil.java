@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.util;
+package com.toughguy.cityDisplay.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,7 +11,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 
-import com.toughguy.dataDisplay.model.content.MyX509TrustManager;
+import com.toughguy.cityDisplay.model.content.MyX509TrustManager;
 
 import java.io.InputStream;
 import net.sf.json.JSONObject;

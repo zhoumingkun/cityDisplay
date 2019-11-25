@@ -1,4 +1,4 @@
-package com.toughguy.dataDisplay.model.content;
+package com.toughguy.cityDisplay.model.content;
 
 public class RecGrade {
 	

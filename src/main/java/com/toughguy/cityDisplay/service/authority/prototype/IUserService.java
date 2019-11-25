@@ -1,10 +1,10 @@
-package com.toughguy.dataDisplay.service.authority.prototype;
+package com.toughguy.cityDisplay.service.authority.prototype;
 
 import java.util.List;
 
-import com.toughguy.dataDisplay.model.authority.Role;
-import com.toughguy.dataDisplay.model.authority.User;
-import com.toughguy.dataDisplay.service.prototype.IGenericService;
+import com.toughguy.cityDisplay.model.authority.Role;
+import com.toughguy.cityDisplay.model.authority.User;
+import com.toughguy.cityDisplay.service.prototype.IGenericService;
 
 /**
  * Licensed to the Apache Software Foundation (ASF) under one

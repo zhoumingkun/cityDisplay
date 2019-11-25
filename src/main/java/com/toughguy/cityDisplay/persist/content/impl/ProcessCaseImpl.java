@@ -1,12 +1,12 @@
-package com.toughguy.dataDisplay.persist.content.impl;
+package com.toughguy.cityDisplay.persist.content.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.toughguy.dataDisplay.model.content.ProcessCase;
-import com.toughguy.dataDisplay.persist.content.prototype.IProcessCaseDao;
-import com.toughguy.dataDisplay.persist.impl.GenericDaoImpl;
+import com.toughguy.cityDisplay.model.content.ProcessCase;
+import com.toughguy.cityDisplay.persist.content.prototype.IProcessCaseDao;
+import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 
 @Repository
 public class ProcessCaseImpl extends GenericDaoImpl<ProcessCase, Integer> implements IProcessCaseDao{
