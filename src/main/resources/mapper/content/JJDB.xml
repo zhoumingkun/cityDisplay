@@ -2,4 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.toughguy.dataDisplay.model.content.JJDB">
 
+<!-- 查询某个类型的案件列表-->
+	<select id="findJQLXDMaj" parameterType="Map" resultType="JJDB">
+		select * from (select * from JJDB ORDER BY bjsj desc ) where jqlxdm=#{jqlxdm}  and 
+        to_char(bjsj,'YYYY-MM-DD')=#{tjTime}
+        and  jqlxdm is not null
+        and substr(xzqhdm,1,4)=substr(#{xzqhdm},1,4)
+        and rownum &lt; 11
+	</select>
+	
+	<!-- 查询某个类型的案件列表-->
+	<select id="findALbyId" parameterType="Map" resultType="JJDB">
+		select * from  JJDB  where jjdbh=#{jjdbh}
+	</select>
+
 </mapper>

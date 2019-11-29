@@ -30,21 +30,22 @@ public class ProcessCaseController {
 		return processCaseService.findProcessCaseHB(tjTime);
 	}
 	
-	/**
+	/**--------------------------市级方法------------------------------------------------------
+	 * 
 	 * 查询立案数环比(各地市)
 	 * @param tjTime
 	 * @return
 	 */
 	@RequestMapping("/findEveryCityCaseNum")
 	
-	public Map<String,Object> findEveryCityCaseNum(String lasj,String xzqhdm){
+	public Map<String,Object> findEveryCityCaseNum(String lasj,String qtTime,String xzqhdm){
 		Map<String,Object> map = new HashMap<>();
 		Map<String,String> fmap = new HashMap<>();
 		List<ProcessCase> findCityCaseNum = processCaseService.findEveryCityCaseNum(lasj,xzqhdm);
 		for(int i=0;i<findCityCaseNum.size();i++) {
 			fmap.put("昨日案件总数", findCityCaseNum.get(i).getAjsl()+"");
 		}
-		List<ProcessCase> findCityCaseNum2 = processCaseService.findEveryCityCaseNum(lasj,xzqhdm);
+		List<ProcessCase> findCityCaseNum2 = processCaseService.findEveryCityCaseNum(qtTime,xzqhdm);
 		for(int i=0;i<findCityCaseNum2.size();i++) {
 			fmap.put("前日案件总数", findCityCaseNum2.get(i).getAjsl()+"");
 		}

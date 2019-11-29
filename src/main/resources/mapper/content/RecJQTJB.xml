@@ -58,7 +58,7 @@
 	<!-- 查询市级各地区警情数量（市级方法）左下-->
 	<select id="findJQNumEverySJ" parameterType="Map" resultType="RecJQTJB">
 		SELECT sum(jqtjbsj.jjsl)as jjsl,sum(jqtjbsj.yxjq)as yxjq,sum(jqtjbsj.cjsl)as cjsl,
-        sum(jqtjbsj.fksl )as fksl,xzqhbsj.xzqhmc
+        sum(jqtjbsj.fksl )as fksl,xzqhbsj.xzqhmc as xzqhdm
 		FROM REC_JQTJB_SJ jqtjbsj
         LEFT JOIN DICT_XZQHB_SJ xzqhbsj ON jqtjbsj.xzqhdm = xzqhbsj.xzqhdm
 		WHERE tjrq=#{tjTime}  and substr(jqtjbsj.xzqhdm,1,4)=substr(#{xzqhdm},1,4)
@@ -82,8 +82,6 @@
 		and xzqhdm=substr(#{xzqhdm},1,4)
 	</select>
 
-
-	
 	
 	
 	

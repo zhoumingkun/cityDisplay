@@ -236,7 +236,6 @@ public class RecJQFLTJBController {
 	@RequestMapping(value = "/findJQFLsecondNumXZQH")
 //	@RequiresPermissions("dictXZQHB:getById")
 	public List<RecJQFLTJB> findJQFLsecondNumXZQH(String tjTime,String xzqhdm) {
-		System.out.println("测试测试"+recJQFLTJBService.findJQFLsecondNumXZQH(tjTime,xzqhdm));
 		return  recJQFLTJBService.findJQFLsecondNumXZQH(tjTime,xzqhdm);
 	}
 	
@@ -251,7 +250,6 @@ public class RecJQFLTJBController {
 	@RequestMapping(value = "/findJQFLNumXZQH")
 //	@RequiresPermissions("dictXZQHB:getById")
 	public List<RecJQFLTJB> findJQFLNumXZQH(String tjTime,String xzqhdm) {
-		System.out.println(tjTime+"lll"+xzqhdm);
 		return  recJQFLTJBService.findJQFLNumXZQH(tjTime,xzqhdm);
 	}
 	
@@ -280,8 +278,8 @@ public class RecJQFLTJBController {
 				cc.put("刑事警情环比", findJQFLNumXZQH1.get(i).getHb()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="行政(治安)警情" || findJQFLNumXZQH1.get(i).getFldmmc().equals("行政(治安)警情")) {
-				aa.put("行政治安警情", findJQFLNumXZQH1.get(i).getJjsl()+"");	
-				cc.put("行政治安警情环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				aa.put("行政(治安)警情", findJQFLNumXZQH1.get(i).getJjsl()+"");	
+				cc.put("行政(治安)警情", findJQFLNumXZQH1.get(i).getHb()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="交通类警情" || findJQFLNumXZQH1.get(i).getFldmmc().equals("交通类警情")) {
 				aa.put("交通类警情", findJQFLNumXZQH1.get(i).getJjsl()+"");
