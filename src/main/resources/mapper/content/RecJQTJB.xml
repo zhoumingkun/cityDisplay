@@ -50,11 +50,7 @@
 		FROM REC_JQTJB_SJ
 		WHERE tjrq=#{tjTime}
 	</select>
-	
-	
-	
-	
-	
+
 	<!-- 查询市级各地区警情数量（市级方法）左下-->
 	<select id="findJQNumEverySJ" parameterType="Map" resultType="RecJQTJB">
 		SELECT sum(jqtjbsj.jjsl)as jjsl,sum(jqtjbsj.yxjq)as yxjq,sum(jqtjbsj.cjsl)as cjsl,

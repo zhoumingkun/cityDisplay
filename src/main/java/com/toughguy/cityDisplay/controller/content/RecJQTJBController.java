@@ -292,7 +292,7 @@ public class RecJQTJBController {
 			fmap.put("昨日报警总数", findJQNumEveryXZQH.get(i).getJjsl()+"");
 			fmap.put("昨日有效警情", findJQNumEveryXZQH.get(i).getYxjq()+"");	
 		}
-		List<RecJQTJB> findJQNumEveryXZQH2 = recJQTJBService.findJQNumEveryXZQH(tjTime,xzqhdm);
+		List<RecJQTJB> findJQNumEveryXZQH2 = recJQTJBService.findJQNumEveryXZQH(qtTime,xzqhdm);
 		for(int i=0;i<findJQNumEveryXZQH2.size();i++) {
 			fmap.put("前日报警总数", findJQNumEveryXZQH2.get(i).getJjsl()+"");
 			fmap.put("前日有效警情", findJQNumEveryXZQH2.get(i).getYxjq()+"");	

@@ -272,57 +272,69 @@ public class RecJQFLTJBController {
 		Map<String,String> aa= new HashMap<>();//昨天的
 		Map<String,String> bb= new HashMap<>();//前天的
 		Map<String,String> cc= new HashMap<>();//昨天环比的
+		Map<String,String> dd= new HashMap<>();//昨天环比的
 		for(int i=0;i<findJQFLNumXZQH1.size();i++) {
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="刑事警情" || findJQFLNumXZQH1.get(i).getFldmmc().equals("刑事警情")) {
 				aa.put("刑事警情", findJQFLNumXZQH1.get(i).getJjsl()+"");
 				cc.put("刑事警情环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("刑事警情", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="行政(治安)警情" || findJQFLNumXZQH1.get(i).getFldmmc().equals("行政(治安)警情")) {
 				aa.put("行政(治安)警情", findJQFLNumXZQH1.get(i).getJjsl()+"");	
-				cc.put("行政(治安)警情", findJQFLNumXZQH1.get(i).getHb()+"");
+				cc.put("行政(治安)警情环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("行政(治安)警情", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="交通类警情" || findJQFLNumXZQH1.get(i).getFldmmc().equals("交通类警情")) {
 				aa.put("交通类警情", findJQFLNumXZQH1.get(i).getJjsl()+"");
 				cc.put("交通类警情环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("交通类警情", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="消防救援" || findJQFLNumXZQH1.get(i).getFldmmc().equals("消防救援")) {
 				aa.put("消防救援", findJQFLNumXZQH1.get(i).getJjsl()+"");
 				cc.put("消防救援环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("消防救援", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="群众求助" || findJQFLNumXZQH1.get(i).getFldmmc().equals("群众求助")) {
 				aa.put("群众求助", findJQFLNumXZQH1.get(i).getJjsl()+"");
 				cc.put("群众求助环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("群众求助", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="应急联动事件" || findJQFLNumXZQH1.get(i).getFldmmc().equals("应急联动事件")) {
 				aa.put("应急联动事件", findJQFLNumXZQH1.get(i).getJjsl()+"");	
 				cc.put("应急联动事件环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("应急联动事件", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="群体事件" || findJQFLNumXZQH1.get(i).getFldmmc().equals("群体事件")) {
 				aa.put("群体事件", findJQFLNumXZQH1.get(i).getJjsl()+"");
 				cc.put("群体事件环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("群体事件", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="纠纷" || findJQFLNumXZQH1.get(i).getFldmmc().equals("纠纷")) {
 				aa.put("纠纷", findJQFLNumXZQH1.get(i).getJjsl()+"");	
 				cc.put("纠纷环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("纠纷", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="举报" || findJQFLNumXZQH1.get(i).getFldmmc().equals("举报")) {
 				aa.put("举报", findJQFLNumXZQH1.get(i).getJjsl()+"");	
 				cc.put("举报环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("举报", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 			if(findJQFLNumXZQH1.get(i).getFldmmc()=="投诉监督" || findJQFLNumXZQH1.get(i).getFldmmc().equals("投诉监督")) {
 				aa.put("投诉监督", findJQFLNumXZQH1.get(i).getJjsl()+"");
 				cc.put("投诉监督环比", findJQFLNumXZQH1.get(i).getHb()+"");
+				dd.put("投诉监督", findJQFLNumXZQH1.get(i).getFldm()+"");
 			}
 		}
 		fmap.put("ZT", aa+"");
 		fmap.put("ZTHB", cc+"");
+		fmap.put("ZTDM", dd+"");
 		
 		for(int i=0;i<findJQFLNumXZQH2.size();i++) {
 			if(findJQFLNumXZQH2.get(i).getFldmmc()=="刑事警情" || findJQFLNumXZQH2.get(i).getFldmmc().equals("刑事警情")) {
 				bb.put("刑事警情", findJQFLNumXZQH2.get(i).getJjsl()+"");
 			}
 			if(findJQFLNumXZQH2.get(i).getFldmmc()=="行政(治安)警情" || findJQFLNumXZQH2.get(i).getFldmmc().equals("行政(治安)警情")) {
-				bb.put("行政治安警情", findJQFLNumXZQH2.get(i).getJjsl()+"");	
+				bb.put("行政(治安)警情", findJQFLNumXZQH2.get(i).getJjsl()+"");	
 			}
 			if(findJQFLNumXZQH2.get(i).getFldmmc()=="交通类警情" || findJQFLNumXZQH2.get(i).getFldmmc().equals("交通类警情")) {
 				bb.put("交通类警情", findJQFLNumXZQH2.get(i).getJjsl()+"");	
@@ -373,91 +385,114 @@ public class RecJQFLTJBController {
 		Map<String,String> aa= new HashMap<>();//昨天的
 		Map<String,String> bb= new HashMap<>();//前天的
 		Map<String,String> cc= new HashMap<>();//昨天环比的
+		Map<String,String> dd= new HashMap<>();//昨天环比的
 		if(fldm.equals("010000")){
 			for(int i=0;i<findJQFLsecondNumHB1.size();i++) {
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="危害国家安全" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("危害国家安全")) {
 					aa.put("危害国家安全", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("危害国家安全", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("危害国家安全", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="危害公共安全" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("危害公共安全")) {
 					aa.put("危害公共安全", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("危害公共安全", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("危害国家安全", findJQFLsecondNumHB1.get(i).getFldm()+"");
+					
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="放火" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("放火")) {
 					aa.put("放火", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("放火", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("放火", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="爆炸" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("爆炸")) {
 					aa.put("爆炸", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("爆炸", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("爆炸", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="劫持" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("劫持")) {
 					aa.put("劫持", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("劫持", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("危害国家安全", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="侵犯人身、民主权利" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("侵犯人身、民主权利")) {
 					aa.put("侵犯人身、民主权利", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("侵犯人身、民主权利", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("侵犯人身、民主权利", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="杀人" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("杀人")) {
 					aa.put("杀人", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("杀人", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("杀人", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="伤害" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("纠纷")) {
 					aa.put("伤害", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("伤害", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("伤害", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="强奸" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("强奸")) {
 					aa.put("强奸", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("强奸", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("强奸", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="绑架" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("绑架")) {
 					aa.put("绑架", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("绑架", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("绑架", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="抢劫" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("抢劫")) {
 					aa.put("抢劫", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("抢劫", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("抢劫", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="盗窃" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("盗窃")) {
 					aa.put("盗窃", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("盗窃", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("盗窃", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="诈骗" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("诈骗")) {
 					aa.put("诈骗", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("诈骗", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("诈骗", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="抢夺" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("抢夺")) {
 					aa.put("抢夺", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("抢夺", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("抢夺", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="妨害社会管理秩序" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("妨害社会管理秩序")) {
 					aa.put("妨害社会管理秩序", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("妨害社会管理秩序", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("妨害社会管理秩序", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="破坏市场经济秩序" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("破坏市场经济秩序")) {
 					aa.put("破坏市场经济秩序", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("破坏市场经济秩序", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("破坏市场经济秩序", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="破坏金融管理秩序" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("破坏金融管理秩序")) {
 					aa.put("破坏金融管理秩序", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("破坏金融管理秩序", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("危害国家安全", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="金融诈骗" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("金融诈骗")) {
 					aa.put("金融诈骗", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("金融诈骗", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("金融诈骗", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="侵犯财产" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("侵犯财产")) {
 					aa.put("侵犯财产", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("侵犯财产", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("侵犯财产", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="破坏环境资源保护" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("破坏环境资源保护")) {
 					aa.put("破坏环境资源保护", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("破坏环境资源保护", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("破坏环境资源保护", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他刑事警情" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他刑事警情")) {
 					aa.put("其他刑事警情", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("其他刑事警情", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("其他刑事警情", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 		}
 		}else if(fldm.equals("020000")){
@@ -465,56 +500,67 @@ public class RecJQFLTJBController {
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="扰乱公共秩序" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("危害国家安全")) {
 					aa.put("扰乱公共秩序", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("扰乱公共秩序", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("扰乱公共秩序", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="妨害公共安全" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("妨害公共安全")) {
 					aa.put("妨害公共安全", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("妨害公共安全", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("妨害公共安全", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="盗窃" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("盗窃")) {
 					aa.put("盗窃", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("盗窃", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("盗窃", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="诈骗" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("诈骗")) {
 					aa.put("诈骗", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("诈骗", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("诈骗", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="抢夺" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("抢夺")) {
 					aa.put("抢夺", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("抢夺", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("危害国家安全", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="侵犯财产权利" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("侵犯财产权利")) {
 					aa.put("侵犯财产权利", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("侵犯财产权利", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("侵犯财产权利", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="侵犯人身权利" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("侵犯人身权利")) {
 					aa.put("侵犯人身权利", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("侵犯人身权利", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("侵犯人身权利", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="卖淫嫖娼淫秽活动" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("卖淫嫖娼淫秽活动")) {
 					aa.put("卖淫嫖娼淫秽活动", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("卖淫嫖娼淫秽活动", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("卖淫嫖娼淫秽活动", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="赌博" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("赌博")) {
 					aa.put("赌博", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 					cc.put("赌博", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("赌博", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="毒品" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("毒品")) {
 					aa.put("毒品", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("毒品", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("毒品", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="违反出入境管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("违反出入境管理")) {
 					aa.put("违反出入境管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("违反出入境管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("违反出入境管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="妨害社会管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("妨害社会管理")) {
 					aa.put("妨害社会管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					cc.put("妨害社会管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("妨害社会管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 				if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他行政治安警情" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他行政治安警情")) {
 					aa.put("其他行政治安警情", findJQFLsecondNumHB1.get(i).getJjsl()+"");
-		
-					
 					cc.put("其他行政治安警情", findJQFLsecondNumHB1.get(i).getHb()+"");
+					dd.put("其他行政治安警情", findJQFLsecondNumHB1.get(i).getFldm()+"");
 				}
 		}
 			}else if(fldm.equals("030000")){
@@ -522,22 +568,27 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="交通事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("交通事故")) {
 						aa.put("交通事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("交通事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("交通事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="交通违法" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("交通违法")) {
 						aa.put("交通违法", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("交通违法", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("交通违法", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="交通设施" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("交通设施")) {
 						aa.put("交通设施", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("交通设施", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("交通设施", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="交通秩序" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("交通秩序")) {
 						aa.put("交通秩序", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("交通秩序", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("交通秩序", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他交通警情" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他交通警情")) {
 						aa.put("其他交通警情", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他交通警情", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他交通警情", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 			}
 				
@@ -546,18 +597,22 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="火灾扑救" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("火灾扑救")) {
 						aa.put("火灾扑救", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("火灾扑救", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("火灾扑救", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="灾害事故抢险救援" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("灾害事故抢险救援")) {
 						aa.put("灾害事故抢险救援", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("灾害事故抢险救援", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("灾害事故抢险救援", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="社会救援" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("社会救援")) {
 						aa.put("社会救援", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("社会救援", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("社会救援", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他消防救援" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他消防救援")) {
 						aa.put("其他消防救援", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他消防救援", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他消防救援", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 			}
 			}else if(fldm.equals("050000")){
@@ -565,42 +620,52 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="人员走失、招领" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("人员走失、招领")) {
 						aa.put("人员走失、招领", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("人员走失、招领", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("人员走失、招领", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="人员遇险遇困" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("人员遇险遇困")) {
 						aa.put("人员遇险遇困", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("人员遇险遇困", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("人员遇险遇困", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="意外伤亡" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("意外伤亡")) {
 						aa.put("意外伤亡", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("意外伤亡", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("意外伤亡", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="开锁" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("开锁")) {
 						aa.put("开锁", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("开锁", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("开锁", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="遗失物品" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("遗失物品")) {
 						aa.put("遗失物品", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("遗失物品", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("遗失物品", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="水、电、气、热险情" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("水、电、气、热险情")) {
 						aa.put("水、电、气、热险情", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("水、电、气、热险情", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("水、电、气、热险情", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="危机病人" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("危机病人")) {
 						aa.put("危机病人", findJQFLsecondNumHB1.get(i).getJjsl()+"");
-						cc.put("开锁", findJQFLsecondNumHB1.get(i).getHb()+"");
+						cc.put("危机病人", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("危机病人", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="自杀" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("自杀")) {
 						aa.put("自杀", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("自杀", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("自杀", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="噪音扰民" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("噪音扰民")) {
 						aa.put("噪音扰民", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("噪音扰民", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("噪音扰民", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他群众求助" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他群众求助")) {
 						aa.put("其他群众求助", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他群众求助", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他群众求助", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 			}
 			}else if(fldm.equals("060000")){
@@ -608,78 +673,97 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="卫生医疗" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("卫生医疗")) {
 						aa.put("卫生医疗", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("卫生医疗", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("卫生医疗", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="电力抢修" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("电力抢修")) {
 						aa.put("电力抢修", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("电力抢修", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("电力抢修", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="劳动保障" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("劳动保障")) {
 						aa.put("劳动保障", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("劳动保障", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("劳动保障", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="林水管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("林水管理")) {
 						aa.put("林水管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("林水管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("林水管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="工商管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("工商管理")) {
 						aa.put("工商管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("工商管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("工商管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="城管执法" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("城管执法")) {
 						aa.put("城管执法", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("城管执法", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("城管执法", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="通信抢修" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("通信抢修")) {
 						aa.put("通信抢修", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("通信抢修", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("通信抢修", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="文广管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("文广管理")) {
 						aa.put("文广管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("文广管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("文广管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="环保执法" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("环保执法")) {
 						aa.put("环保执法", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("环保执法", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("环保执法", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="质量监督" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("质量监督")) {
 						aa.put("质量监督", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("质量监督", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("质量监督", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="烟草案件" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("烟草案件")) {
 						aa.put("烟草案件", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("烟草案件", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("烟草案件", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="民政求助" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("民政求助")) {
 						aa.put("民政求助", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("民政求助", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("民政求助", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="水气热抢修" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("水气热抢修")) {
 						aa.put("水气热抢修", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("水气热抢修", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("水气热抢修", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="食品药品管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("食品药品管理")) {
 						aa.put("食品药品管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("食品药品管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("食品药品管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="安全生产监督" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("安全生产监督")) {
 						aa.put("安全生产监督", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("安全生产监督", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("安全生产监督", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="园文旅游管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("园文旅游管理")) {
 						aa.put("园文旅游管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("园文旅游管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("园文旅游管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="市民热线" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("市民热线")) {
 						aa.put("市民热线", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("市民热线", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("市民热线", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="协助联动单位" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("协助联动单位")) {
 						aa.put("协助联动单位", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("协助联动单位", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("协助联动单位", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他应急联动" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他应急联动")) {
 						aa.put("其他应急联动", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他应急联动", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他应急联动", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 			}
 			}else if(fldm.equals("070000")){
@@ -687,42 +771,52 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="聚众上访" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("聚众上访")) {
 						aa.put("聚众上访", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("聚众上访", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("聚众上访", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="聚众械斗" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("聚众械斗")) {
 						aa.put("聚众械斗", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("聚众械斗", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("聚众械斗", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="聚众滋事" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("聚众滋事")) {
 						aa.put("聚众滋事", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("聚众滋事", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("聚众滋事", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="罢工罢课罢市" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("罢工罢课罢市")) {
 						aa.put("罢工罢课罢市", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("罢工罢课罢市", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("罢工罢课罢市", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="工商管理" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("工商管理")) {
 						aa.put("工商管理", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("工商管理", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("工商管理", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="请愿静坐" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("请愿静坐")) {
 						aa.put("请愿静坐", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("请愿静坐", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("请愿静坐", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="聚众阻塞交通" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("聚众阻塞交通")) {
 						aa.put("聚众阻塞交通", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("聚众阻塞交通", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("聚众阻塞交通", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="聚众围堵冲击" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("聚众围堵冲击")) {
 						aa.put("聚众围堵冲击", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("聚众围堵冲击", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("聚众围堵冲击", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="非法集会游行示威" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("非法集会游行示威")) {
 						aa.put("非法集会游行示威", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("非法集会游行示威", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("非法集会游行示威", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他群体事件" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他群体事件")) {
 						aa.put("其他群体事件", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他群体事件", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他群体事件", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					
 			}
@@ -731,54 +825,67 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="交通纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("交通纠纷")) {
 						aa.put("交通纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("交通纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("交通纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="家庭婚恋纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("家庭婚恋纠纷")) {
 						aa.put("家庭婚恋纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("家庭婚恋纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("家庭婚恋纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="邻里纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("邻里纠纷")) {
 						aa.put("邻里纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
-						cc.put("聚众滋事", findJQFLsecondNumHB1.get(i).getHb()+"");
+						cc.put("邻里纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("邻里纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="消费纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("消费纠纷")) {
 						aa.put("消费纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("消费纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("消费纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="劳务、劳资纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("劳务、劳资纠纷")) {
 						aa.put("劳务、劳资纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("劳务、劳资纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("劳务、劳资纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="请愿静坐" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("请愿静坐")) {
 						aa.put("请愿静坐", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("请愿静坐", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("请愿静坐", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="经济纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("经济纠纷")) {
 						aa.put("经济纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("经济纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("经济纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="医疗纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("医疗纠纷")) {
 						aa.put("医疗纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("医疗纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("医疗纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="征地拆迁纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("征地拆迁纠纷")) {
 						aa.put("征地拆迁纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("征地拆迁纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("征地拆迁纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="租赁纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("租赁纠纷")) {
 						aa.put("租赁纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("租赁纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("租赁纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="陆上水域权属纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("陆上水域权属纠纷")) {
 						aa.put("陆上水域权属纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("陆上水域权属纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("陆上水域权属纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="执法纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("执法纠纷")) {
 						aa.put("执法纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("执法纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("执法纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他纠纷")) {
 						aa.put("其他纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他纠纷", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					
 			}
@@ -787,107 +894,134 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="劳动生产事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("劳动生产事故")) {
 						aa.put("劳动生产事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("劳动生产事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("劳动生产事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="危化物品事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("危化物品事故")) {
 						aa.put("危化物品事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
-						cc.put("家庭婚恋纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						cc.put("危化物品事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("危化物品事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="中毒事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("中毒事故")) {
 						aa.put("中毒事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("中毒事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("中毒事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="爆炸事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("爆炸事故")) {
 						aa.put("爆炸事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("爆炸事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("爆炸事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="沉船事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("沉船事故")) {
 						aa.put("沉船事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("沉船事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("沉船事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="挤压踩踏事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("挤压踩踏事故")) {
 						aa.put("挤压踩踏事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("挤压踩踏事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("挤压踩踏事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="建筑坍塌事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("建筑坍塌事故")) {
 						aa.put("建筑坍塌事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("建筑坍塌事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("建筑坍塌事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="自然灾害事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("自然灾害事故")) {
 						aa.put("自然灾害事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
-						cc.put("医疗纠纷", findJQFLsecondNumHB1.get(i).getHb()+"");
+						cc.put("自然灾害事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("自然灾害事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="疫情事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("疫情事故")) {
 						aa.put("疫情事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("疫情事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("疫情事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他灾害事故" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他灾害事故")) {
 						aa.put("其他灾害事故", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他灾害事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他灾害事故", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					
 			}
 			}else if(fldm.equals("100000")){
+				System.out.println("哈哈哈哈"+fldm);
+				System.out.println("AAAA"+findJQFLsecondNumHB1);
 				for(int i=0;i<findJQFLsecondNumHB1.size();i++) {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="涉赌线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("涉赌线索")) {
 						aa.put("涉赌线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("涉赌线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("涉赌线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 				
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="涉黄线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("涉黄线索")) {
 						aa.put("涉黄线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("涉黄线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("涉黄线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="涉毒线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("涉毒线索")) {
 						aa.put("涉毒线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("涉毒线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("涉毒线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="涉枪涉爆线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("涉枪涉爆线索")) {
 						aa.put("涉枪涉爆线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("涉枪涉爆线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("涉枪涉爆线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="涉境外人员违法线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("涉境外人员违法线索")) {
 						aa.put("涉境外人员违法线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");
-						cc.put("沉船事故", findJQFLsecondNumHB1.get(i).getHb()+"");
+						cc.put("涉境外人员违法线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("涉境外人员违法线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="涉恐线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("涉恐线索")) {
 						aa.put("涉恐线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("涉恐线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("涉恐线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="法轮功等邪教、非法宗教活动" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("法轮功等邪教、非法宗教活动")) {
 						aa.put("法轮功等邪教、非法宗教活动", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("法轮功等邪教、非法宗教活动", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("法轮功等邪教、非法宗教活动", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="违反治安管理的经营活动" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("违反治安管理的经营活动")) {
 						aa.put("违反治安管理的经营活动", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("违反治安管理的经营活动", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("违反治安管理的经营活动", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="可疑物品" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("可疑物品")) {
 						aa.put("可疑物品", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("可疑物品", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("可疑物品", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="嫌疑、可疑人员或违法活动" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("嫌疑、可疑人员或违法活动")) {
 						aa.put("嫌疑、可疑人员或违法活动", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("嫌疑、可疑人员或违法活动", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("嫌疑、可疑人员或违法活动", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
-					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="无名尸体" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("嫌疑、可疑人员或违法活动")) {
+					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="无名尸体" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("无名尸体")) {
 						aa.put("无名尸体", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("无名尸体", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("无名尸体", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="传销活动" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("传销活动")) {
 						aa.put("传销活动", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("传销活动", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("传销活动", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="举报反动宣传" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("举报反动宣传")) {
 						aa.put("举报反动宣传", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("举报反动宣传", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("举报反动宣传", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="举报诈骗信息" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("举报诈骗信息")) {
 						aa.put("举报诈骗信息", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("举报诈骗信息", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("举报诈骗信息", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他举报线索" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他举报线索")) {
 						aa.put("其他举报线索", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他举报线索", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他举报线索", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 				}
 			}else if(fldm.equals("110000")){
@@ -895,31 +1029,38 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="违法违纪" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("违法违纪")) {
 						aa.put("违法违纪", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("违法违纪", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("违法违纪", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="执法不当" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("执法不当")) {
 						aa.put("执法不当", findJQFLsecondNumHB1.get(i).getJjsl()+"");	
 						cc.put("执法不当", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("执法不当", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="不作为" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("不作为")) {
 						aa.put("不作为", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("不作为", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("不作为", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="工作作风" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("工作作风")) {
 						aa.put("工作作风", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("工作作风", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("工作作风", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="出警缓慢" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("出警缓慢")) {
 						aa.put("出警缓慢", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("出警缓慢", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("出警缓慢", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="其他投诉监督" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("其他投诉监督")) {
 						aa.put("其他投诉监督", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 						cc.put("其他投诉监督", findJQFLsecondNumHB1.get(i).getHb()+"");
+						dd.put("其他投诉监督", findJQFLsecondNumHB1.get(i).getFldm()+"");
 					}
 				}
 			}
 		fmap.put("ZT", aa+"");
 		fmap.put("ZTHB", cc+"");
+		fmap.put("ZTDM", dd+"");
 		if(fldm.equals("010000")){
 			for(int i=0;i<findJQFLsecondNumHB2.size();i++) {
 				if(findJQFLsecondNumHB2.get(i).getFldmmc()=="危害国家安全" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("危害国家安全")) {
@@ -1173,8 +1314,8 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="工商管理" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("工商管理")) {
 						bb.put("工商管理", findJQFLsecondNumHB2.get(i).getJjsl()+"");
 					}
-					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="请愿静坐" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("请愿静坐")) {
-						bb.put("请愿静坐", findJQFLsecondNumHB1.get(i).getJjsl()+"");
+					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="请愿静坐" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("请愿静坐")) {
+						bb.put("请愿静坐", findJQFLsecondNumHB2.get(i).getJjsl()+"");
 					}
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="聚众阻塞交通" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("聚众阻塞交通")) {
 						bb.put("聚众阻塞交通", findJQFLsecondNumHB2.get(i).getJjsl()+"");
@@ -1192,7 +1333,7 @@ public class RecJQFLTJBController {
 			}
 			}else if(fldm.equals("080000")){
 				for(int i=0;i<findJQFLsecondNumHB2.size();i++) {
-					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="交通纠纷" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("交通纠纷")) {
+					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="交通纠纷" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("交通纠纷")) {
 						bb.put("交通纠纷", findJQFLsecondNumHB2.get(i).getJjsl()+"");
 					}
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="家庭婚恋纠纷" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("家庭婚恋纠纷")) {
@@ -1213,7 +1354,7 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="经济纠纷" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("经济纠纷")) {
 						bb.put("经济纠纷", findJQFLsecondNumHB2.get(i).getJjsl()+"");
 					}
-					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="医疗纠纷" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("医疗纠纷")) {
+					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="医疗纠纷" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("医疗纠纷")) {
 						bb.put("医疗纠纷", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					}
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="征地拆迁纠纷" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("征地拆迁纠纷")) {
@@ -1272,7 +1413,6 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="涉赌线索" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("涉赌线索")) {
 						bb.put("涉赌线索", findJQFLsecondNumHB2.get(i).getJjsl()+"");
 					}
-				
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="涉黄线索" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("涉黄线索")) {
 						bb.put("涉黄线索", findJQFLsecondNumHB2.get(i).getJjsl()+"");	
 					}
@@ -1306,10 +1446,10 @@ public class RecJQFLTJBController {
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="传销活动" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("传销活动")) {
 						bb.put("传销活动", findJQFLsecondNumHB2.get(i).getJjsl()+"");
 					}
-					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="举报反动宣传" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("举报反动宣传")) {
+					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="举报反动宣传" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("举报反动宣传")) {
 						bb.put("举报反动宣传", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					}
-					if(findJQFLsecondNumHB1.get(i).getFldmmc()=="举报诈骗信息" || findJQFLsecondNumHB1.get(i).getFldmmc().equals("举报诈骗信息")) {
+					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="举报诈骗信息" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("举报诈骗信息")) {
 						bb.put("举报诈骗信息", findJQFLsecondNumHB1.get(i).getJjsl()+"");
 					}
 					if(findJQFLsecondNumHB2.get(i).getFldmmc()=="其他举报线索" || findJQFLsecondNumHB2.get(i).getFldmmc().equals("其他举报线索")) {
