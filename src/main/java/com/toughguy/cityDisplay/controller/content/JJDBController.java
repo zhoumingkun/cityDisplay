@@ -34,12 +34,12 @@ public class JJDBController {
 	
 	
 	/**
-	 * 查询某个类型的案件列表
+	 * 查询某个类型的案件详情
 	 * @param tjTime 
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping(value = "/findJQLXDMaj")
+	@RequestMapping(value = "/findALbyId")
 //	@RequiresPermissions("dictXZQHB:getById")
 	public List<JJDB> findALbyId(String jjdbh) {
 		return  JJDBService.findALbyId(jjdbh);
