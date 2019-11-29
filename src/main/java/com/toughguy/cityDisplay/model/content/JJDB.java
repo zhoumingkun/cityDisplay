@@ -9,9 +9,9 @@ public class JJDB {
 	private String JJLX;		//接警类型
 	private String BJFSDM;		//报警方式
 	private String LHLX;		//来话类型代码
-	private Date BJSJ;			//报警时间
-	private Date JJSJ;			//接警时间
-	private Date WCSJ;			//接警完成时间
+	private String BJSJ;			//报警时间
+	private String JJSJ;			//接警时间
+	private String WCSJ;			//接警完成时间
 	private String BJDH;		//报警电话
 	private String BJDHYHXM;	//报警电话用户姓名
 	private String BJDHYHDZ;	//报警电话用户地址
@@ -32,7 +32,7 @@ public class JJDB {
 	private String SJCPH;		//涉及车牌号
 	private int SFSWHCL;		//是否是危化车辆
 	private int GXBS;			//更新标识
-	private Date GXSJ;			//更新时间
+	private String GXSJ;			//更新时间
 	public String getXZQHDM() {
 		return XZQHDM;
 	}
@@ -69,22 +69,22 @@ public class JJDB {
 	public void setLHLX(String lHLX) {
 		LHLX = lHLX;
 	}
-	public Date getBJSJ() {
+	public String getBJSJ() {
 		return BJSJ;
 	}
-	public void setBJSJ(Date bJSJ) {
+	public void setBJSJ(String bJSJ) {
 		BJSJ = bJSJ;
 	}
-	public Date getJJSJ() {
+	public String getJJSJ() {
 		return JJSJ;
 	}
-	public void setJJSJ(Date jJSJ) {
+	public void setJJSJ(String jJSJ) {
 		JJSJ = jJSJ;
 	}
-	public Date getWCSJ() {
+	public String getWCSJ() {
 		return WCSJ;
 	}
-	public void setWCSJ(Date wCSJ) {
+	public void setWCSJ(String wCSJ) {
 		WCSJ = wCSJ;
 	}
 	public String getBJDH() {
@@ -207,10 +207,10 @@ public class JJDB {
 	public void setGXBS(int gXBS) {
 		GXBS = gXBS;
 	}
-	public Date getGXSJ() {
+	public String getGXSJ() {
 		return GXSJ;
 	}
-	public void setGXSJ(Date gXSJ) {
+	public void setGXSJ(String gXSJ) {
 		GXSJ = gXSJ;
 	}
 	@Override
