@@ -273,57 +273,39 @@ public class RecJQTJBController {
 		map.put("aa",dd);
 		return map;
 	}
+
 	
-	/**
-	 * 查询有效警情数量环比(首页)
+	/**-------------------------------------------市级方法---------------------------------------------
+	 * 查询有效警情数量环比(首页地图)
 	 * @param tjTime
 	 * @return
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/findNumSYHB")
 //	@RequiresPermissions("dictXZQHB:getById")
-	public Map<String,Object> findNumSYHB(String tjTime,String qtTime) {		//传递昨天和前天的时间
-//		List <RecJQTJB> arr=recJQTJBService.findNumHB(tjTime);
-//		int i = 0;
-//		Float f=0.0f;
-//		for(RecJQTJB d:arr){
-//			f += d.getYxhb();
-//		}
-//		System.out.println("哈哈哈"+f);
-//		return f;
-//	}
+	public Map<String,Object> findNumSYHB(String tjTime,String qtTime,String xzqhdm) {		//传递昨天和前天的时间
 		Map<String,Object> map = new HashMap<>();
-		Map<String,String> fmap = new HashMap<>();
-		List <RecJQTJB> arr=recJQTJBService.findNumHB(tjTime);
-//		Float f=0.0f;
-//		Float ff=0.0f;
-//		for(RecJQTJB d:arr){
-//			f += d.getHb();
-//			ff+=d.getYxhb();
-//		}
-//		fmap.put("报警总数环比", f+"");
-//		fmap.put("有效警情环比", ff+"");
 		
-		List<RecJQTJB> findJQNum = recJQTJBService.findJQNum(tjTime);
-		for(int i=0;i<findJQNum.size();i++) {
-			fmap.put("昨日报警总数", findJQNum.get(i).getJjsl()+"");
-			fmap.put("昨日有效警情", findJQNum.get(i).getYxjq()+"");	
+		Map<String,String> fmap = new HashMap<>();
+		List<RecJQTJB> findJQNumEveryXZQH = recJQTJBService.findJQNumEveryXZQH(tjTime,xzqhdm);
+		for(int i=0;i<findJQNumEveryXZQH.size();i++) {
+			fmap.put("昨日报警总数", findJQNumEveryXZQH.get(i).getJjsl()+"");
+			fmap.put("昨日有效警情", findJQNumEveryXZQH.get(i).getYxjq()+"");	
 		}
-		List<RecJQTJB> findJQNum2 = recJQTJBService.findJQNum(qtTime);
-		for(int i=0;i<findJQNum2.size();i++) {
-			fmap.put("前日报警总数", findJQNum2.get(i).getJjsl()+"");
-			fmap.put("前日有效警情", findJQNum2.get(i).getYxjq()+"");	
+		List<RecJQTJB> findJQNumEveryXZQH2 = recJQTJBService.findJQNumEveryXZQH(tjTime,xzqhdm);
+		for(int i=0;i<findJQNumEveryXZQH2.size();i++) {
+			fmap.put("前日报警总数", findJQNumEveryXZQH2.get(i).getJjsl()+"");
+			fmap.put("前日有效警情", findJQNumEveryXZQH2.get(i).getYxjq()+"");	
 		}
 		String zrbj=fmap.get("昨日报警总数");
+		
 		int zrbjsl=Integer.parseInt(zrbj);
 		String qrbj=fmap.get("前日报警总数");
 		int qrbjsl=Integer.parseInt(qrbj);
-//		int bjhb=(zrbjsl-qrbjsl)/qrbjsl;
 		DecimalFormat df = new DecimalFormat("0.000");
 		String num = df.format((float) (zrbjsl-qrbjsl)/qrbjsl);
 		double d = Double.valueOf(num);
 		fmap.put("报警总数环比", d+"");
-		
 		
 		String zryx=fmap.get("昨日有效警情");
 		int zryxsl=Integer.parseInt(zryx);
@@ -338,16 +320,30 @@ public class RecJQTJBController {
 		return map;
 	}
 	
+	
 	/**
-	 * 查询环比页面各行政区划警情检测数量
-	 * @param startTime endTime
+	 * 查询市级行政区划总数警情数量（市级方法）左上方法1
+	 * @param String tjTime,String xzqhdm
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping(value = "/findJQNumEveryXZQH")
+	@RequestMapping(value = "/findJQNumSJ")
 //	@RequiresPermissions("dictXZQHB:getById")
-	public List<RecJQTJB> findJQNumEveryXZQH(String tjTime,String xzqhdm) {
-		return  recJQTJBService.findJQNumEveryXZQH(tjTime,xzqhdm);
+	public List<RecJQTJB> findJQNumSJ(String tjTime,String xzqhdm) {
+		return  recJQTJBService.findJQNumSJ(tjTime,xzqhdm);
+	}
+	
+	
+	/**
+	 * 查询市级各地区警情数量（市级方法）左下
+	 * @param String tjTime,String xzqhdm
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "/findJQNumEverySJ")
+//	@RequiresPermissions("dictXZQHB:getById")
+	public List<RecJQTJB> findJQNumEverySJ(String tjTime,String xzqhdm) {
+		return  recJQTJBService.findJQNumEverySJ(tjTime,xzqhdm);
 	}
 
 

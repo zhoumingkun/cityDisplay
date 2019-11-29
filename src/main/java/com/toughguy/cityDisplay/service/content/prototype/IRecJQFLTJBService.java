@@ -4,6 +4,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 import com.toughguy.cityDisplay.model.content.RecJQFLTJB;
+import com.toughguy.cityDisplay.model.content.RecJQTJB;
 import com.toughguy.cityDisplay.service.prototype.IGenericService;
 
 /**
@@ -36,4 +37,8 @@ public interface IRecJQFLTJBService extends IGenericService<RecJQFLTJB, Integer>
 	
 	//查询各行政区划五大类的警情分类数量
 	public List<RecJQFLTJB> findJQFLWDLXZQH(String tjTime,String xzqhdm);
+	
+
+	// 选择大类进二类页面    二类数量及环比-----------------市级方法--------------------------------
+	public List<RecJQFLTJB>  findJQFLsecondNumHB(String tjTime,String xzqhdm,String fldm);
 }

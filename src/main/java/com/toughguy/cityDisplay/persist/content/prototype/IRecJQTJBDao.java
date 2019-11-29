@@ -30,4 +30,14 @@ public interface IRecJQTJBDao extends IGenericDao<RecJQTJB, Integer> {
 	
 	//查询各行政区划警情数量
 	public List<RecJQTJB>  findJQNumEveryXZQH(Map<String,String> map);
+	
+	
+	
+	// 查询市级行政区划总数警情数量（市级方法）左上方法1（首页）--------------------------市级方法--------------------------------------
+	public List<RecJQTJB>  findJQNumSJ(Map<String,String> map);
+	
+	// 查询市级各地区警情数量（市级方法）左下
+	public List<RecJQTJB>  findJQNumEverySJ(Map<String,String> map);
+	
+	
 }

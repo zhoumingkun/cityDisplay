@@ -74,9 +74,9 @@
 	</select>
 	-->
 	
-	<!-- 查询各大类的警情分类数量（二级页面各行政区划今日、昨日、前日）tjTime xzqhdm-->
+	<!-- 查询各大类的警情分类数量（二级页面各行政区划今日、昨日、前日）tjTime xzqhdm   市级方法-->
 	<select id="findJQFLNumXZQH" parameterType="Map" resultType="RecJQFLTJB">
-		SELECT  sum(jqfltjb.jjsl)as jjsl,jqfldmb.fldm,jqfldmb.flmc as fldmmc ,xzqhb.xzqhmc as xzqhdm
+		SELECT  sum(jqfltjb.jjsl)as jjsl,jqfldmb.fldm,jqfldmb.flmc as fldmmc ,xzqhb.xzqhmc as xzqhdm,jqfltjb.hb as hb
         from REC_JQFLTJB jqfltjb
          LEFT JOIN DICT_XZQHB  xzqhb ON jqfltjb.xzqhdm =substr(xzqhb.xzqhdm,1,4)
         LEFT JOIN DICT_JQFLDMB jqfldmb ON jqfltjb.fldm=jqfldmb.fldm
@@ -84,7 +84,7 @@
         WHERE tjrq=#{tjTime}   
         and jqfldmb.fllx=1
         and jqfltjb.xzqhdm=substr(#{xzqhdm},1,4)
-        group by jqfldmb.fldm,jqfldmb.flmc,xzqhb.xzqhmc
+        group by jqfldmb.fldm,jqfldmb.flmc,xzqhb.xzqhmc,jqfltjb.hb
 	</select>
 	
 	<!-- 查询各大类的警情分类总和数量（首页今日、昨日、前日）
@@ -157,6 +157,21 @@
         and jqfldmb.fllx=2
         and jqfltjb.xzqhdm=substr(#{xzqhdm},1,4)
         group by jqfldmb.flmc,jqfldmb1.flmc,xzqhb.xzqhmc,jqfltjb.hb
+	</select>
+	
+	<!-- 市级新方法   选择大类进二类页面    二类数量及环比-->
+	<select id="findJQFLsecondNumHB" parameterType="Map" resultType="RecJQFLTJB">
+		SELECT  sum(jqfltjb.jjsl)as jjsl,jqfldmb.fldm as fldm,jqfldmb.flmc as fldmmc ,
+        jqfldmb1.fldm as sjdm,jqfldmb1.flmc as sjdmmc,xzqhb.xzqhmc as xzqhdm, jqfltjb.hb
+        from REC_JQFLTJB jqfltjb 
+         LEFT JOIN DICT_XZQHB  xzqhb ON jqfltjb.xzqhdm =substr(xzqhb.xzqhdm,1,4)
+        LEFT JOIN DICT_JQFLDMB jqfldmb ON jqfltjb.fldm=jqfldmb.fldm
+        LEFT JOIN DICT_JQFLDMB jqfldmb1 ON jqfldmb.sjdm=jqfldmb1.fldm
+        WHERE tjrq=#{tjTime}  
+        and jqfldmb.fllx=2
+        and jqfldmb1.fldm=#{fldm}
+        and jqfltjb.xzqhdm=substr(#{xzqhdm},1,4)
+        group by jqfldmb.flmc,jqfldmb1.flmc,xzqhb.xzqhmc,jqfldmb.fldm,jqfldmb1.fldm,jqfltjb.hb
 	</select>
 
 	

@@ -9,13 +9,7 @@
 		WHERE tjrq=#{tjTime}
 	</select>
 	
-	<!-- 查询警情统计监测 环比页面各行政区划-->
-	<select id="findJQNumEveryXZQH" parameterType="Map" resultType="RecJQTJB">
-		SELECT sum(jjsl)as jjsl,sum(yxjq)as yxjq,sum(cjsl)as cjsl,sum(fksl )as fksl 
-		FROM REC_JQTJB
-		WHERE tjrq=#{tjTime}
-		and xzqhdm=substr(#{xzqhdm},1,4)
-	</select>
+	
 	
 	<!-- 查询近七天警情统计（首页）-->
 	<select id="findJQSevenDayShen" parameterType="Map" resultType="RecJQTJB">
@@ -48,6 +42,44 @@
 		SELECT hb,yxhb
 		FROM REC_JQTJB
 		WHERE tjrq=#{tjTime} 
+	</select>
+	
+	<!-- 查询警情统计监测 （各地市）-->
+	<select id="findJQNumByXZQH" parameterType="String" resultType="RecJQTJB">
+		SELECT sum(jjsl)as jjsl,sum(yxjq)as yxjq,sum(cjsl)as cjsl,sum(fksl )as fksl
+		FROM REC_JQTJB_SJ
+		WHERE tjrq=#{tjTime}
+	</select>
+	
+	
+	
+	
+	
+	<!-- 查询市级各地区警情数量（市级方法）左下-->
+	<select id="findJQNumEverySJ" parameterType="Map" resultType="RecJQTJB">
+		SELECT sum(jqtjbsj.jjsl)as jjsl,sum(jqtjbsj.yxjq)as yxjq,sum(jqtjbsj.cjsl)as cjsl,
+        sum(jqtjbsj.fksl )as fksl,xzqhbsj.xzqhmc
+		FROM REC_JQTJB_SJ jqtjbsj
+        LEFT JOIN DICT_XZQHB_SJ xzqhbsj ON jqtjbsj.xzqhdm = xzqhbsj.xzqhdm
+		WHERE tjrq=#{tjTime}  and substr(jqtjbsj.xzqhdm,1,4)=substr(#{xzqhdm},1,4)
+        group by xzqhbsj.xzqhmc,jqtjbsj.jjsl,jqtjbsj.yxjq,jqtjbsj.cjsl,jqtjbsj.fksl 
+        ORDER BY jjsl desc
+	</select>
+	
+	<!-- 查询市级行政区划总数警情数量（市级方法）左上方法1-->
+	<select id="findJQNumSJ" parameterType="Map" resultType="RecJQTJB">
+		 SELECT sum(jjsl)as jjsl,sum(yxjq)as yxjq,sum(cjsl)as cjsl,sum(fksl )as fksl 
+		FROM REC_JQTJB_SJ
+		WHERE tjrq=#{tjTime}
+		and substr(xzqhdm,1,4)=substr(#{xzqhdm},1,4)
+	</select>
+	
+	<!-- 查询警情统计监测 环比页面各行政区划 左上方法2-->
+	<select id="findJQNumEveryXZQH" parameterType="Map" resultType="RecJQTJB">
+		SELECT sum(jjsl)as jjsl,sum(yxjq)as yxjq,sum(cjsl)as cjsl,sum(fksl )as fksl 
+		FROM REC_JQTJB
+		WHERE tjrq=#{tjTime}
+		and xzqhdm=substr(#{xzqhdm},1,4)
 	</select>
 
 

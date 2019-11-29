@@ -35,5 +35,8 @@ public interface IRecJQFLTJBDao extends IGenericDao<RecJQFLTJB, Integer> {
 	
 	//查询各地级市五大类的警情分类数量
 	public List<RecJQFLTJB> findJQFLWDLXZQH(Map<String ,String> map);
+	
+	// 选择大类进二类页面    二类数量及环比--------------------市级方法----------------------------------------
+		public List<RecJQFLTJB>  findJQFLsecondNumHB(Map<String,String> map);
 
 }

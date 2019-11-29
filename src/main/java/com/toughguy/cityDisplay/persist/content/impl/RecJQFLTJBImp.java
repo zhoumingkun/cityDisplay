@@ -4,6 +4,7 @@ import java.util.Map;
 import org.springframework.stereotype.Repository;
 
 import com.toughguy.cityDisplay.model.content.RecJQFLTJB;
+import com.toughguy.cityDisplay.model.content.RecJQTJB;
 import com.toughguy.cityDisplay.persist.content.prototype.IRecJQFLTJBDao;
 import com.toughguy.cityDisplay.persist.impl.GenericDaoImpl;
 /**
@@ -63,4 +64,10 @@ public class RecJQFLTJBImp extends GenericDaoImpl<RecJQFLTJB, Integer> implement
 		return sqlSessionTemplate.selectList(typeNameSpace + ".findJQFLWDLXZQH",map);
 	}
 	
+	//-------------------------------------市级方法-----------------------------------
+	@Override
+	public List<RecJQFLTJB> findJQFLsecondNumHB(Map<String, String> map) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectList(typeNameSpace + ".findJQFLsecondNumHB", map);
+	}
 }

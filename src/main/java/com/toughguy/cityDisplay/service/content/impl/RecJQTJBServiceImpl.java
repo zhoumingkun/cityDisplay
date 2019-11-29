@@ -88,6 +88,26 @@ public class RecJQTJBServiceImpl extends GenericServiceImpl<RecJQTJB, Integer> i
 		map.put("xzqhdm", xzqhdm);
 		return recJQTJBDao.findJQNumEveryXZQH(map);
 	}
+	
+	//-------------------------------------市级方法------------------------------------------
+	@Override
+	public List<RecJQTJB> findJQNumSJ(String tjTime,String xzqhdm) {
+		// TODO Auto-generated method stub
+		Map<String ,String> map = new HashMap<String, String>();
+		map.put("tjTime", tjTime);
+		map.put("xzqhdm", xzqhdm);
+		return recJQTJBDao.findJQNumSJ(map);
+	}
+	
+	
+	@Override
+	public List<RecJQTJB> findJQNumEverySJ(String tjTime,String xzqhdm) {
+		// TODO Auto-generated method stub
+		Map<String ,String> map = new HashMap<String, String>();
+		map.put("tjTime", tjTime);
+		map.put("xzqhdm", xzqhdm);
+		return recJQTJBDao.findJQNumEverySJ(map);
+	}
 
 	
 			            

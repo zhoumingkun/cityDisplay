@@ -49,6 +49,20 @@ public class RecJQTJBImp extends GenericDaoImpl<RecJQTJB, Integer> implements IR
 		// TODO Auto-generated method stub
 		return sqlSessionTemplate.selectList(typeNameSpace + ".findJQNumEveryXZQH", map);
 	}
+//----------------------------------------市级方法-----------------------------------------------
+	@Override
+	public List<RecJQTJB> findJQNumSJ(Map<String, String> map) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectList(typeNameSpace + ".findJQNumSJ", map);
+	}
+
+	@Override
+	public List<RecJQTJB> findJQNumEverySJ(Map<String, String> map) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectList(typeNameSpace + ".findJQNumEverySJ", map);
+	}
+
+	
 
 	
 	

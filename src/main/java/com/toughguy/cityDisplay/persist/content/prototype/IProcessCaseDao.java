@@ -20,5 +20,11 @@ public interface IProcessCaseDao extends IGenericDao<ProcessCase, Integer> {
 	
 	//查询启邦首页
 	public List<ProcessCase> findProcessCaseHB(String tjTime);
+	
+	//查询太原市的立案数
+	public List<ProcessCase> findTYCaseNum(String lasj);
+	
+	//查询地级市的立案数（市级）
+	public List<ProcessCase> findEveryCityCaseNum(Map<String,String> map);
 
 }

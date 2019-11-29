@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.toughguy.cityDisplay.model.content.RecJJLXTJB;
 import com.toughguy.cityDisplay.model.content.RecJQFLTJB;
+import com.toughguy.cityDisplay.model.content.RecJQTJB;
 import com.toughguy.cityDisplay.persist.content.prototype.IRecJQFLTJBDao;
 import com.toughguy.cityDisplay.service.content.prototype.IRecJQFLTJBService;
 import com.toughguy.cityDisplay.service.impl.GenericServiceImpl;
@@ -103,6 +104,16 @@ public class RecJQFLTJBServiceImpl extends GenericServiceImpl<RecJQFLTJB, Intege
 		map.put("tjTime", tjTime);
 		map.put("xzqhdm", xzqhdm);
 		return recJQFLTJBDao.findJQFLWDLXZQH(map);
+	}
+	
+	@Override
+	public List<RecJQFLTJB> findJQFLsecondNumHB(String tjTime, String xzqhdm, String fldm) {
+		// TODO Auto-generated method stub
+		Map<String ,String> map = new HashMap<String, String>();
+		map.put("tjTime", tjTime);
+		map.put("xzqhdm", xzqhdm);
+		map.put("fldm", fldm);
+		return recJQFLTJBDao.findJQFLsecondNumHB(map);
 	}
 
 }
