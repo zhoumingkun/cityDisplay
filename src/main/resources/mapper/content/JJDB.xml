@@ -13,27 +13,24 @@
 	
 	<!-- 查询某个类型的案件详情-->
 	<select id="findALbyId" parameterType="Map" resultType="JJDB">
-	select j.BJNR,j.JQDZ,j.BJSJ,j.BJRXM,j.BJDH,j.BKRYQKSM,j.SSRYQKSM,j.JJDBH,j.JJSJ,j.WCSJ,j.GXSJ,j.SWRYQKSM,j.JJDWDM,
-    bjfs.BJFSMC as BJFSDM,
-    lhlx.LHLXMC as LHLX,
-    jjlx.JJLXMC as JJLX,
-    jqlb.FLMC as JQLBDM,
-    jqlx.FLMC as JQLXDM,
-    jqxl.FLMC as JQXLDM 
-    from  JJDB  j,
-    DICT_BJFSDMB bjfs,
-    DICT_LHLXDMB lhlx,
-    DICT_JJLXDMB jjlx,
-    DICT_JQFLDMB jqlb,
-    DICT_JQFLDMB jqlx,
-    DICT_JQFLDMB jqxl
-    where jjdbh=#{jjdbh} AND
-    j.BJFSDM=bjfs.BJFSDM AND
-    j.LHLX=lhlx.LHLXDM AND
-    j.JJLX=jjlx.JJLXDM AND
-    j.JQLBDM=jqlb.FLDM AND
-    j.JQLXDM=jqlx.FLDM AND
-    j.JQXLDM=jqxl.FLDM
+		select * from JJDB where jjdbh=#{jjdbh} 
 	</select>
+	
+	<select id="findBJFSMC" parameterType="JJDB" resultType="JJDB">
+		select BJFSMC as BJFSDM  from DICT_BJFSDMB where BJFSDM=#{BJFSDM}
+	</select>
+	
+	<select id="findLHLXMC" parameterType="JJDB" resultType="JJDB">
+		select LHLXMC as LHLX  from DICT_LHLXDMB where LHLXDM=#{LHLX}
+	</select>
+	
+	<select id="findJJLXMC" parameterType="JJDB" resultType="JJDB">
+		select JJLXMC as JJLX from DICT_JJLXDMB where JJLXDM=#{JJLX}
+	</select>
+	
+	<select id="findDL" parameterType="JJDB" resultType="JJDB">
+		select FLMC as JQLBDM from DICT_JQFLDMB where FLDM=#{JQLBDM}
+	</select>
+	
 
 </mapper>

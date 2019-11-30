@@ -27,4 +27,28 @@ public class JJDBImpl extends GenericDaoImpl<JJDB, Integer> implements IJJDBDao{
 			return sqlSessionTemplate.selectList(typeNameSpace + ".findALbyId", map);
 		}
 
+		@Override
+		public JJDB findBJFSMC(JJDB jjdb) {
+			// TODO Auto-generated method stub
+			return sqlSessionTemplate.selectOne(typeNameSpace + ".findBJFSMC", jjdb);
+		}
+
+		@Override
+		public JJDB findLHLXMC(JJDB jjdb) {
+			// TODO Auto-generated method stub
+			return sqlSessionTemplate.selectOne(typeNameSpace + ".findLHLXMC", jjdb);
+		}
+
+		@Override
+		public JJDB findJJLXMC(JJDB jjdb) {
+			// TODO Auto-generated method stub
+			return sqlSessionTemplate.selectOne(typeNameSpace + ".findJJLXMC", jjdb);
+		}
+
+		@Override
+		public JJDB findDL(JJDB jjdb) {
+			// TODO Auto-generated method stub
+			return sqlSessionTemplate.selectOne(typeNameSpace + ".findDL", jjdb);
+		}
+
 }
