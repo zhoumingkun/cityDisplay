@@ -77,12 +77,12 @@
 	</select>
 	
 	<!-- 查询警情统计监测 环比页面各行政区划 左上方法2-->
-	<select id="findJQNumEveryXZQH" parameterType="Map" resultType="RecJQTJB">
+	<!-- <select id="findJQNumEveryXZQH" parameterType="Map" resultType="RecJQTJB">
 		SELECT sum(jjsl)as jjsl,sum(yxjq)as yxjq,sum(cjsl)as cjsl,sum(fksl )as fksl 
 		FROM REC_JQTJB
 		WHERE tjrq=#{tjTime}
 		and xzqhdm=substr(#{xzqhdm},1,4)
-	</select>
+	</select> 重名方法-->
 
 	
 	
