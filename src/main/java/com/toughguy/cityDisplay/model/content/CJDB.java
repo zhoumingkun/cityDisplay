@@ -9,13 +9,13 @@ public class CJDB {
 	private String CJDWDM;				//处警单位代码
 	private String CJYJ;				//处警意见
 	private String CDDWDM;				//出警单位代码
-	private Date CJSJ;					//处警时间
-	private Date PDJSSJ;				//派单接收时间
+	private String CJSJ;					//处警时间
+	private String PDJSSJ;				//派单接收时间
 	private String CDRY;				//出动人员
 	private String CDCL;				//出动车辆
 	private String JQZTDM;				//警情状态代码
 	private int GXBS;					//更新标识
-	private Date GXSJ;					//更新时间
+	private String GXSJ;					//更新时间
 	public String getXZQHDM() {
 		return XZQHDM;
 	}
@@ -52,16 +52,16 @@ public class CJDB {
 	public void setCDDWDM(String cDDWDM) {
 		CDDWDM = cDDWDM;
 	}
-	public Date getCJSJ() {
+	public String getCJSJ() {
 		return CJSJ;
 	}
-	public void setCJSJ(Date cJSJ) {
+	public void setCJSJ(String cJSJ) {
 		CJSJ = cJSJ;
 	}
-	public Date getPDJSSJ() {
+	public String getPDJSSJ() {
 		return PDJSSJ;
 	}
-	public void setPDJSSJ(Date pDJSSJ) {
+	public void setPDJSSJ(String pDJSSJ) {
 		PDJSSJ = pDJSSJ;
 	}
 	public String getCDRY() {
@@ -88,10 +88,10 @@ public class CJDB {
 	public void setGXBS(int gXBS) {
 		GXBS = gXBS;
 	}
-	public Date getGXSJ() {
+	public String getGXSJ() {
 		return GXSJ;
 	}
-	public void setGXSJ(Date gXSJ) {
+	public void setGXSJ(String gXSJ) {
 		GXSJ = gXSJ;
 	}
 	@Override

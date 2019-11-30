@@ -2,6 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.toughguy.cityDisplay.model.content.CJDB">
 
+	<!-- 查询某个类型的案件详情-->
+	<select id="findALbyId" parameterType="String" resultType="CJDB">
+		select * from CJDB where jjdbh=#{jjdbh} 
+	</select>
 
-
+	<select id="findJQZTDM" parameterType="CJDB" resultType="CJDB">
+		select JQCLZTMC as JQZTDM  from JQCLZTDMB where JQCLZTDM=#{JQZTDM} 
+	</select>
 </mapper>

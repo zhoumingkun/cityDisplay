@@ -8,16 +8,16 @@ public class FKDB {
 	private String JJDBH;		//接警单编号
 	private String CJDBH;		//处警单编号
 	private String FKDWDM;		//反馈单位代码
-	private Date FKSJ;			//反馈时间
-	private Date SJCJSJ;		//实际出警时间
-	private Date DDXCSJ;		//到达现场时间
+	private String FKSJ;		//反馈时间
+	private String SJCJSJ;		//实际出警时间
+	private String DDXCSJ;		//到达现场时间
 	private String JQLBDM;		//警情分类代码
 	private String JQLXDM;		//警情类型代码
 	private String JQXLDM;		//警情细类代码
-	private Date JQFSSJ;		//警情发生时间
+	private String JQFSSJ;		//警情发生时间
 	private int FKDWXZB;		//反馈定位X坐标（处置现场位置）
 	private int FKDWYZB;		//反馈定位Y坐标（处置现场位置）
-	private String JQDJDM;		//警情等级代码
+	private String JQDJDM;		//警情等级代码     ==========
 	private String CJQK;		//出警情况
 	private String CDCLQK;		//出动车辆情况
 	private String CDRYQK;		//出动人员情况
@@ -29,15 +29,15 @@ public class FKDB {
 	private String SSRSSM;		//受伤人数说明
 	private int SWRS;			//死亡人数
 	private String SWRSSM;		//死亡人数说明
-	private String CLJGDM;		//处理结果代码
+	private String CLJGDM;		//处理结果代码  ===============
 	private String JQCLJG;		//警情处理结果
 	private String SSQKMS;		//损失情况描述
 	private String SFWHP;		//是否装载危险品
 	private int SHJDCS;			//损坏机动车数
 	private int SHFJDCS;		//损坏非机动车数
-	private String JQZTDM;		//警情状态代码
+	private String JQZTDM;		//警情状态代码  =================
 	private int GXBS;			//更新标识
-	private Date GXSJ;			//更新时间
+	private String GXSJ;			//更新时间
 	public String getXZQHDM() {
 		return XZQHDM;
 	}
@@ -68,22 +68,22 @@ public class FKDB {
 	public void setFKDWDM(String fKDWDM) {
 		FKDWDM = fKDWDM;
 	}
-	public Date getFKSJ() {
+	public String getFKSJ() {
 		return FKSJ;
 	}
-	public void setFKSJ(Date fKSJ) {
+	public void setFKSJ(String fKSJ) {
 		FKSJ = fKSJ;
 	}
-	public Date getSJCJSJ() {
+	public String getSJCJSJ() {
 		return SJCJSJ;
 	}
-	public void setSJCJSJ(Date sJCJSJ) {
+	public void setSJCJSJ(String sJCJSJ) {
 		SJCJSJ = sJCJSJ;
 	}
-	public Date getDDXCSJ() {
+	public String getDDXCSJ() {
 		return DDXCSJ;
 	}
-	public void setDDXCSJ(Date dDXCSJ) {
+	public void setDDXCSJ(String dDXCSJ) {
 		DDXCSJ = dDXCSJ;
 	}
 	public String getJQLBDM() {
@@ -104,10 +104,10 @@ public class FKDB {
 	public void setJQXLDM(String jQXLDM) {
 		JQXLDM = jQXLDM;
 	}
-	public Date getJQFSSJ() {
+	public String getJQFSSJ() {
 		return JQFSSJ;
 	}
-	public void setJQFSSJ(Date jQFSSJ) {
+	public void setJQFSSJ(String jQFSSJ) {
 		JQFSSJ = jQFSSJ;
 	}
 	public int getFKDWXZB() {
@@ -242,10 +242,10 @@ public class FKDB {
 	public void setGXBS(int gXBS) {
 		GXBS = gXBS;
 	}
-	public Date getGXSJ() {
+	public String getGXSJ() {
 		return GXSJ;
 	}
-	public void setGXSJ(Date gXSJ) {
+	public void setGXSJ(String gXSJ) {
 		GXSJ = gXSJ;
 	}
 	@Override
