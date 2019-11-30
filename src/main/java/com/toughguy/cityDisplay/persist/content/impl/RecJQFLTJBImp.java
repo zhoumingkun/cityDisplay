@@ -64,7 +64,7 @@ public class RecJQFLTJBImp extends GenericDaoImpl<RecJQFLTJB, Integer> implement
 		return sqlSessionTemplate.selectList(typeNameSpace + ".findJQFLWDLXZQH",map);
 	}
 	
-	//-------------------------------------市级方法-----------------------------------
+	//-------------------------------------市级方法-------------------------------------------------------------
 	@Override
 	public List<RecJQFLTJB> findJQFLsecondNumHB(Map<String, String> map) {
 		// TODO Auto-generated method stub

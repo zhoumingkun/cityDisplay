@@ -93,13 +93,6 @@ public class ProcessCaseServiceImpl extends GenericServiceImpl<ProcessCase, Inte
 
 
 	@Override
-	public List<ProcessCase> findTYCaseNum(String lasj) {
-		// TODO Auto-generated method stub
-		return processCaseDao.findTYCaseNum(lasj);
-	}
-
-
-	@Override
 	public List<ProcessCase> findEveryCityCaseNum(String lasj, String xzqhdm) {
 		// TODO Auto-generated method stub
 		Map<String ,String> map = new HashMap<String, String>();

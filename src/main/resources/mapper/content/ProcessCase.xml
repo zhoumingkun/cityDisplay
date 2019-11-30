@@ -26,7 +26,7 @@
 	</select>
 	
 	
-	<!-- 查询太原市的立案数 -->
+	<!-- 根据行政区划查询各市级的立案数 -->
 	<select id="findEveryCityCaseNum" resultType="ProcessCase" parameterType="String">
 		select  qlczfba.sljsdw ,sum(qlczfba.ajsl) as ajsl
    		from rec_qlczfba qlczfba 
