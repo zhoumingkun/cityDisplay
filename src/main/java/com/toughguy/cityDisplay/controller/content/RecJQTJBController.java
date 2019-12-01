@@ -430,10 +430,166 @@ public class RecJQTJBController {
 	public List<RecJQTJB> findJQNumEveryXZQH(String tjTime,String xzqhdm) {
 		return  recJQTJBService.findJQNumEveryXZQH(tjTime,xzqhdm);
 	}
-
 	
+	
+
+	/**
+	 * 查询警情数量环比(省级环比麻将)
+	 * @param tjTime
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "/findNumHBTWO")
+//	@RequiresPermissions("dictXZQHB:getById")
+	public Map<String,Object> findNumHBTWO(String tjTime,String qtTime) {		//传递昨天和前天的时间
+		Map<String,Object> map = new HashMap<>();
+		Map<String,String> fmap = new HashMap<>();
+		List <RecJQTJB> arr=recJQTJBService.findNumHB(tjTime);
+//		Float f=0.0f;
+//		Float ff=0.0f;
+//		for(RecJQTJB d:arr){
+//			f += d.getHb();
+//			ff+=d.getYxhb();
+//		}
+//		fmap.put("报警总数环比", f+"");
+//		fmap.put("有效警情环比", ff+"");
+		
+		List<RecJQTJB> findJQNum = recJQTJBService.findJQNum(tjTime);
+		for(int i=0;i<findJQNum.size();i++) {
+			fmap.put("昨日报警总数", findJQNum.get(i).getJjsl()+"");
+			fmap.put("昨日有效警情", findJQNum.get(i).getYxjq()+"");	
+		}
+		List<RecJQTJB> findJQNum2 = recJQTJBService.findJQNum(qtTime);
+		for(int i=0;i<findJQNum2.size();i++) {
+			fmap.put("前日报警总数", findJQNum2.get(i).getJjsl()+"");
+			fmap.put("前日有效警情", findJQNum2.get(i).getYxjq()+"");	
+		}
+		String zrbj=fmap.get("昨日报警总数");
+		int zrbjsl=Integer.parseInt(zrbj);
+		String qrbj=fmap.get("前日报警总数");
+		int qrbjsl=Integer.parseInt(qrbj);
+//		int bjhb=(zrbjsl-qrbjsl)/qrbjsl;
+		DecimalFormat df = new DecimalFormat("0.000");
+		String num = df.format((float) (zrbjsl-qrbjsl)/qrbjsl);
+		double d = Double.valueOf(num);
+		fmap.put("报警总数环比", d+"");
+		
+		String zryx=fmap.get("昨日有效警情");
+		int zryxsl=Integer.parseInt(zryx);
+		String qryx=fmap.get("前日有效警情");
+		int qryxsl=Integer.parseInt(qryx);
+		DecimalFormat df1 = new DecimalFormat("0.000");
+		String num1 = df1.format((float) (zryxsl-qryxsl)/qryxsl);
+		double f = Double.valueOf(num1);
+		fmap.put("有效警情环比", f+"");
+
+		map.put("Sjqhbfx", fmap);
+		List<RecJQFLTJB> findJQFLNum = recJQFLTJBService.findJQFLWDL(tjTime);			//昨日
+		Map<String,String> aa= new HashMap<>();
+		Map<String,String> cc= new HashMap<>();
+		for(int i=0;i<findJQFLNum.size();i++) {
+			if(findJQFLNum.get(i).getFldmmc()=="诈骗" || findJQFLNum.get(i).getFldmmc().equals("诈骗")) {
+				aa.put("诈骗", findJQFLNum.get(i).getJjsl()+"");
+				cc.put("诈骗", findJQFLNum.get(i).getHb()+"");
+			}
+			if(findJQFLNum.get(i).getFldmmc()=="盗窃" || findJQFLNum.get(i).getFldmmc().equals("盗窃")) {
+				aa.put("盗窃", findJQFLNum.get(i).getJjsl()+"");	
+				cc.put("盗窃", findJQFLNum.get(i).getHb()+"");
+			}
+			if(findJQFLNum.get(i).getFldmmc()=="贩毒" || findJQFLNum.get(i).getFldmmc().equals("贩毒")) {
+				aa.put("贩毒", findJQFLNum.get(i).getJjsl()+"");
+				cc.put("贩毒", findJQFLNum.get(i).getHb()+"");
+			}
+			if(findJQFLNum.get(i).getFldmmc()=="强奸" || findJQFLNum.get(i).getFldmmc().equals("强奸")) {
+				aa.put("强奸", findJQFLNum.get(i).getJjsl()+"");
+				cc.put("强奸", findJQFLNum.get(i).getHb()+"");
+			}
+			if(findJQFLNum.get(i).getFldmmc()=="抢劫" || findJQFLNum.get(i).getFldmmc().equals("抢劫")) {
+				aa.put("抢劫", findJQFLNum.get(i).getJjsl()+"");
+				cc.put("抢劫", findJQFLNum.get(i).getHb()+"");
+			}
+		}
+		map.put("yesterday", aa);
+		map.put("yesterdayHB", cc);
+		
+		List<RecJQFLTJB> findJQFLNum2 = recJQFLTJBService.findJQFLWDL(qtTime);			//前日
+		Map<String,String> bb= new HashMap<>();
+		for(int i=0;i<findJQFLNum2.size();i++) {
+			if(findJQFLNum2.get(i).getFldmmc()=="诈骗" || findJQFLNum2.get(i).getFldmmc().equals("诈骗")) {
+				bb.put("诈骗", findJQFLNum2.get(i).getJjsl()+"");
+			}
+			if(findJQFLNum2.get(i).getFldmmc()=="盗窃" || findJQFLNum2.get(i).getFldmmc().equals("盗窃")) {
+				bb.put("盗窃", findJQFLNum2.get(i).getJjsl()+"");	
+			}
+			if(findJQFLNum2.get(i).getFldmmc()=="贩毒" || findJQFLNum2.get(i).getFldmmc().equals("贩毒")) {
+				bb.put("贩毒", findJQFLNum2.get(i).getJjsl()+"");
+			}
+			if(findJQFLNum2.get(i).getFldmmc()=="强奸" || findJQFLNum2.get(i).getFldmmc().equals("强奸")) {
+				bb.put("强奸", findJQFLNum2.get(i).getJjsl()+"");
+			}
+			if(findJQFLNum2.get(i).getFldmmc()=="抢劫" || findJQFLNum2.get(i).getFldmmc().equals("抢劫")) {
+				bb.put("抢劫", findJQFLNum2.get(i).getJjsl()+"");
+			}
+		}
+		map.put("beforeday", bb);
+		List<String> dd = new ArrayList<String>();
+		dd.add("诈骗");
+		dd.add("盗窃");
+		dd.add("贩毒");
+		dd.add("强奸");
+		dd.add("抢劫");
+		map.put("aa",dd);
+		
+		return map;
+	}
+
+	/**
+	 * 查询有效警情数量环比(首页山西省)
+	 * @param tjTime
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "/findNumSXSYHB")
+//	@RequiresPermissions("dictXZQHB:getById")
+	public Map<String,Object> findNumSXSYHB(String tjTime,String qtTime) {		//传递昨天和前天的时间
+		Map<String,Object> map = new HashMap<>();
+		Map<String,String> fmap = new HashMap<>();
+		List <RecJQTJB> arr=recJQTJBService.findNumHB(tjTime);
+		List<RecJQTJB> findJQNum = recJQTJBService.findJQNum(tjTime);
+		for(int i=0;i<findJQNum.size();i++) {
+			fmap.put("昨日报警总数", findJQNum.get(i).getJjsl()+"");
+			fmap.put("昨日有效警情", findJQNum.get(i).getYxjq()+"");	
+		}
+		List<RecJQTJB> findJQNum2 = recJQTJBService.findJQNum(qtTime);
+		for(int i=0;i<findJQNum2.size();i++) {
+			fmap.put("前日报警总数", findJQNum2.get(i).getJjsl()+"");
+			fmap.put("前日有效警情", findJQNum2.get(i).getYxjq()+"");	
+		}
+		String zrbj=fmap.get("昨日报警总数");
+		int zrbjsl=Integer.parseInt(zrbj);
+		String qrbj=fmap.get("前日报警总数");
+		int qrbjsl=Integer.parseInt(qrbj);
+//		int bjhb=(zrbjsl-qrbjsl)/qrbjsl;
+		DecimalFormat df = new DecimalFormat("0.000");
+		String num = df.format((float) (zrbjsl-qrbjsl)/qrbjsl);
+		double d = Double.valueOf(num);
+		fmap.put("报警总数环比", d+"");
+		
+		
+		String zryx=fmap.get("昨日有效警情");
+		int zryxsl=Integer.parseInt(zryx);
+		String qryx=fmap.get("前日有效警情");
+		int qryxsl=Integer.parseInt(qryx);
+		DecimalFormat df1 = new DecimalFormat("0.000");
+		String num1 = df1.format((float) (zryxsl-qryxsl)/qryxsl);
+		double f = Double.valueOf(num1);
+		fmap.put("有效警情环比", f+"");
+		
+		map.put("Sjqhbfx", fmap);
+		return map;
+	}
 	/**-------------------------------------------市级方法---------------------------------------------
-	 * 查询有效警情数量环比(首页地图)
+	 * 查询有效警情数量环比(市级首页地图)
 	 * @param tjTime
 	 * @return
 	 */
