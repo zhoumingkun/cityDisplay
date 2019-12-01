@@ -60,12 +60,14 @@ public class FKDBServiceImpl extends GenericServiceImpl<FKDB, Integer> implement
 				 FKDB fkdb = fkdbDaoImpl.findJQZTDM(j);
 				 list.get(i).setJQZTDM(fkdb.getJQZTDM());
 			 }	
+			 if(list.get(i).getXZQHDM()!=null && list.get(i).getXZQHDM()!=" " && !list.get(i).getXZQHDM().equals(null)) {
+				 FKDB j = new FKDB();
+				 j.setXZQHDM(list.get(i).getXZQHDM());
+				 FKDB fkdb = fkdbDaoImpl.findXZQHDM(j);
+				 list.get(i).setXZQHDM(fkdb.getXZQHDM());
+			 }	
+			 
 		}
-		if(list==null || list.size()<=0 ) {
-			List<FKDB> f = new ArrayList<FKDB>();
-			return f;
-		}
-
 		return list;
 	}
 	

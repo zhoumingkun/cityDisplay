@@ -13,4 +13,7 @@ public interface ICJDBDao extends IGenericDao<CJDB, Integer> {
 	
 	//根据警情状态代码查询对应汉字
 	public CJDB findJQZTDM(CJDB cjdb);
+
+	public CJDB findXZQHDM(CJDB j);
+	
 }

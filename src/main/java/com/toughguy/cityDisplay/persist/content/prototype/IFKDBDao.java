@@ -22,4 +22,7 @@ public interface IFKDBDao extends IGenericDao<FKDB, Integer>{
 	
 	//根据警情状态代码查询名称
 	public FKDB findJQZTDM(FKDB fkdb);
+	
+	//根据行政区划代码查询名称
+	public FKDB findXZQHDM(FKDB fkdb);
 }

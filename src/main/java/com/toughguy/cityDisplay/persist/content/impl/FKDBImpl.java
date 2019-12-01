@@ -41,4 +41,10 @@ public class FKDBImpl extends GenericDaoImpl<FKDB, Integer> implements IFKDBDao{
 		return sqlSessionTemplate.selectOne(typeNameSpace + ".findJQZTDM", fkdb);
 	}
 
+	@Override
+	public FKDB findXZQHDM(FKDB fkdb) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectOne(typeNameSpace + ".findXZQHDM", fkdb);
+	}
+
 }

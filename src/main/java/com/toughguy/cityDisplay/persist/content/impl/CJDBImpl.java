@@ -24,4 +24,10 @@ public class CJDBImpl extends GenericDaoImpl<CJDB, Integer> implements ICJDBDao{
 		return sqlSessionTemplate.selectOne(typeNameSpace + ".findJQZTDM",cjdb);
 	}
 
+	@Override
+	public CJDB findXZQHDM(CJDB cjdb) {
+		// TODO Auto-generated method stub
+		return sqlSessionTemplate.selectOne(typeNameSpace + ".findXZQHDM",cjdb);
+	}
+
 }

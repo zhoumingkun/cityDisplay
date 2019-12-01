@@ -10,4 +10,8 @@
 	<select id="findJQZTDM" parameterType="CJDB" resultType="CJDB">
 		select JQCLZTMC as JQZTDM  from JQCLZTDMB where JQCLZTDM=#{JQZTDM} 
 	</select>
+	
+	<select id="findXZQHDM" parameterType="CJDB" resultType="CJDB">
+		select XZQHMC as XZQHDM from DICT_XZQHB_SJ where XZQHDM=#{XZQHDM}
+	</select>
 </mapper>

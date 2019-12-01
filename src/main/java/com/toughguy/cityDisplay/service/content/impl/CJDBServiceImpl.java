@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.toughguy.cityDisplay.model.content.CJDB;
+import com.toughguy.cityDisplay.model.content.FKDB;
 import com.toughguy.cityDisplay.model.content.JJDB;
 import com.toughguy.cityDisplay.persist.content.prototype.ICJDBDao;
 import com.toughguy.cityDisplay.service.content.prototype.ICJDBService;
@@ -26,10 +27,12 @@ public class CJDBServiceImpl extends GenericServiceImpl<CJDB, Integer> implement
 				 CJDB cjdb = cjdbDaoImpl.findJQZTDM(list.get(i));
 				 list.get(i).setJQZTDM(cjdb.getJQZTDM());
 			 }
-		}
-		if(list==null || list.equals(null)) {
-			List<CJDB> c = new ArrayList<CJDB>();
-			return c;
+			if(list.get(i).getXZQHDM()!=null && list.get(i).getXZQHDM()!=" " && !list.get(i).getXZQHDM().equals(null)) {
+				 CJDB j = new CJDB();
+				 j.setXZQHDM(list.get(i).getXZQHDM());
+				 CJDB cjdb = cjdbDaoImpl.findXZQHDM(j);
+				 list.get(i).setXZQHDM(cjdb.getXZQHDM());
+			 }	
 		}
 		return list;
 	}
