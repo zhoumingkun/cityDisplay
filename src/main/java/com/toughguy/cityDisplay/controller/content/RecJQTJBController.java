@@ -280,7 +280,7 @@ public class RecJQTJBController {
 		}*/
 		zmap.put("QTSL", bb+"");
 		
-		if(!aa.get("诈骗").equals("0")){
+		if(!bb.get("诈骗").equals("0")){
 			int zrzpsl=Integer.parseInt(aa.get("诈骗"));
 			int qrzpsl=Integer.parseInt(bb.get("诈骗"));
 			DecimalFormat df2 = new DecimalFormat("0.000");
@@ -291,7 +291,7 @@ public class RecJQTJBController {
 			hmap.put("诈骗总数环比", "0");
 		}
 		
-		if(!aa.get("盗窃").equals("0")){
+		if(!bb.get("盗窃").equals("0")){
 			String zrdq=aa.get("盗窃");
 			int zrdqsl=Integer.parseInt(zrdq);
 			String qrdq=bb.get("盗窃");
@@ -313,7 +313,7 @@ public class RecJQTJBController {
 //		double d4 = Double.valueOf(num4);
 //		fmap.put("贩毒总数环比", d4+"");
 		
-		if(!aa.get("强奸").equals("0")){
+		if(!bb.get("强奸").equals("0")){
 			String zrqj=aa.get("强奸");
 			int zrqjsl=Integer.parseInt(zrqj);
 			String qrqj=bb.get("强奸");
@@ -326,7 +326,7 @@ public class RecJQTJBController {
 			hmap.put("强奸总数环比", "0");
 		}
 		
-		if(!aa.get("抢劫").equals("0")){
+		if(!bb.get("抢劫").equals("0")){
 			String zrqiangjie=aa.get("抢劫");
 			String qrqiangjie=bb.get("抢劫");
 			int zrqiangjiesl=Integer.parseInt(zrqiangjie);
